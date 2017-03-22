@@ -1,5 +1,5 @@
 //
-//  WaterFlowViewController.h
+//  WaterflowViewController.h
 //  HRCocoaKit
 //
 //  Created by 许昊然 on 2017/3/22.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WaterFlowViewController : UIViewController
+@interface WaterflowViewController : UIViewController
 
 @end

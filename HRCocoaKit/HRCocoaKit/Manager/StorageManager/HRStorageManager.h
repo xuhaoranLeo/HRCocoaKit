@@ -42,13 +42,16 @@
  移除指定类型以外的数据
 
  @param typeArr 保留数据的类型
+ @param finish 完成回调
  */
-+ (void)removeAllCacheExceptStorageType:(NSArray <NSString *> *)typeArr;
++ (void)removeAllCacheExceptStorageType:(NSArray <NSString *> *)typeArr finish:(void(^)())finish;
 
 /**
  移除所有数据
+ 
+ @param finish 完成回调
  */
-+ (void)removeAllCache;
++ (void)removeAllCache:(void(^)())finish;
 
 /**
  计算缓存大小

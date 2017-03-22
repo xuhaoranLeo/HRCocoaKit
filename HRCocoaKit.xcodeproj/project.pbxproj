@@ -43,7 +43,7 @@
 		23E6B9731E821512000E6E25 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9721E821512000E6E25 /* HomeViewController.m */; };
 		23E6B9771E822424000E6E25 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9761E822424000E6E25 /* CollectionViewController.m */; };
 		23E6B97A1E822433000E6E25 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9791E822433000E6E25 /* TableViewController.m */; };
-		23E6B97D1E82243C000E6E25 /* WaterFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B97C1E82243C000E6E25 /* WaterFlowViewController.m */; };
+		23E6B97D1E82243C000E6E25 /* WaterflowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B97C1E82243C000E6E25 /* WaterflowViewController.m */; };
 		23E6B9811E82257A000E6E25 /* StorageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B97F1E82257A000E6E25 /* StorageViewController.m */; };
 		23E6B9821E82257A000E6E25 /* StorageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E6B9801E82257A000E6E25 /* StorageViewController.xib */; };
 		23F02AEC1E810F0A007618D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F02AEB1E810F0A007618D9 /* main.m */; };
@@ -131,8 +131,8 @@
 		23E6B9761E822424000E6E25 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		23E6B9781E822433000E6E25 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		23E6B9791E822433000E6E25 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		23E6B97B1E82243C000E6E25 /* WaterFlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFlowViewController.h; sourceTree = "<group>"; };
-		23E6B97C1E82243C000E6E25 /* WaterFlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFlowViewController.m; sourceTree = "<group>"; };
+		23E6B97B1E82243C000E6E25 /* WaterflowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterflowViewController.h; sourceTree = "<group>"; };
+		23E6B97C1E82243C000E6E25 /* WaterflowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterflowViewController.m; sourceTree = "<group>"; };
 		23E6B97E1E82257A000E6E25 /* StorageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageViewController.h; sourceTree = "<group>"; };
 		23E6B97F1E82257A000E6E25 /* StorageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageViewController.m; sourceTree = "<group>"; };
 		23E6B9801E82257A000E6E25 /* StorageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StorageViewController.xib; sourceTree = "<group>"; };
@@ -351,8 +351,8 @@
 				23E6B9791E822433000E6E25 /* TableViewController.m */,
 				23E6B9751E822424000E6E25 /* CollectionViewController.h */,
 				23E6B9761E822424000E6E25 /* CollectionViewController.m */,
-				23E6B97B1E82243C000E6E25 /* WaterFlowViewController.h */,
-				23E6B97C1E82243C000E6E25 /* WaterFlowViewController.m */,
+				23E6B97B1E82243C000E6E25 /* WaterflowViewController.h */,
+				23E6B97C1E82243C000E6E25 /* WaterflowViewController.m */,
 			);
 			path = HRViewModelVC;
 			sourceTree = "<group>";
@@ -526,7 +526,7 @@
 				23F02AEC1E810F0A007618D9 /* main.m in Sources */,
 				23E6B92C1E821134000E6E25 /* CALayer+WaveLine.m in Sources */,
 				23E6B9371E821134000E6E25 /* UINavigationBar+CustomColor.m in Sources */,
-				23E6B97D1E82243C000E6E25 /* WaterFlowViewController.m in Sources */,
+				23E6B97D1E82243C000E6E25 /* WaterflowViewController.m in Sources */,
 				23E6B9331E821134000E6E25 /* NSString+Timestamp.m in Sources */,
 				23E6B9341E821134000E6E25 /* NSArray+Safe.m in Sources */,
 				23E6B9391E821134000E6E25 /* UITextField+Placeholder.m in Sources */,

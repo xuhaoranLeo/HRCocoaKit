@@ -11,7 +11,7 @@
 #import "StorageViewController.h"
 #import "CollectionViewController.h"
 #import "TableViewController.h"
-#import "WaterFlowViewController.h"
+#import "WaterflowViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -64,7 +64,7 @@
         }
             break;
         case 3: {
-            WaterFlowViewController *svc = [WaterFlowViewController new];
+            WaterflowViewController *svc = [WaterflowViewController new];
             [self showViewController:svc sender:nil];
         }
             break;
@@ -77,13 +77,11 @@
 #pragma mark - getter
 - (UITableView *)tableView {
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-64) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) style:UITableViewStylePlain];
         _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.tableFooterView = [[UIView alloc] init];
         _tableView.showsVerticalScrollIndicator = NO;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableView;
 }

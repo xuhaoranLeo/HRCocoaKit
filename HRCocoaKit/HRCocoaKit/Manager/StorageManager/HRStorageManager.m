@@ -48,7 +48,7 @@ static NSString * const FileName = @"LocalStorage";
     return [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
 }
 
-+ (void)removeAllCacheExceptStorageType:(NSArray <NSString *> *)typeArr {
++ (void)removeAllCacheExceptStorageType:(NSArray <NSString *> *)typeArr finish:(void(^)())finish {
     HRStorageManager *mamager = [HRStorageManager sharedManager];
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSDirectoryEnumerator *dirEnum = [[NSFileManager defaultManager] enumeratorAtPath:mamager.storagePath];
@@ -60,11 +60,16 @@ static NSString * const FileName = @"LocalStorage";
             NSString *path = [mamager.storagePath stringByAppendingPathComponent:fileName];
             [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
         }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (finish) {
+                finish();
+            }
+        });
     });
 }
 
-+ (void)removeAllCache {
-    [HRStorageManager removeAllCacheExceptStorageType:nil];
++ (void)removeAllCache:(void(^)())finish {
+    [HRStorageManager removeAllCacheExceptStorageType:nil finish:finish];
 }
 
 + (NSInteger)calculateCacheSize {

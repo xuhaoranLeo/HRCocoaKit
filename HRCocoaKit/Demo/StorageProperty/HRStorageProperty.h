@@ -6,6 +6,5 @@
 //  Copyright © 2017年 许昊然. All rights reserved.
 //
 
-static NSString * const kUserInfoStore          = @"FHUserInfoStore";       // 用户信息
-static NSString * const kGlobalConfigStore      = @"FHGlobalConfigStore";   // 全局配置信息
-static NSString * const kHomePageDataStore      = @"FHHomePageDataStore";   // 首页数据
+static NSString * const kUserInfoStore          = @"UserInfoStore";
+static NSString * const kGlobalConfigStore      = @"GlobalConfigStore";
