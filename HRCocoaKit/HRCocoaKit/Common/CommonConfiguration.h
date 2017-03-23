@@ -16,10 +16,14 @@
 #import "UIView+CornerBorder.h"
 #import "NSString+Empty.h"
 #import "CommonDefine.h"
-//#import "HRHUDManager.h"
+#import "HRHUDManager.h"
 
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
 #import "Masonry.h"
 
 #endif
+
+/*
+ pod 'HRCocoaKit', :git => 'https://github.com/xuhaoranLeo/HRCocoaKit.git', :tag => '0.0.1'
+ */

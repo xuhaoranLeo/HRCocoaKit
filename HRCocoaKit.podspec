@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 
   s.name         = "HRCocoaKit"
   s.version      = "0.0.1"
-  s.summary      = "Framework for FiberhomeCloud by Xu Haoran"
+  s.summary      = "An Objective-C library for FiberhomeCloud by Xu Haoran"
   s.homepage     = "https://github.com/xuhaoranLeo"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "许昊然" => "liang_andy@163.com" }

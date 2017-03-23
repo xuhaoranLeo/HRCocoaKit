@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		234535401E836DBB00BBC1EF /* HRHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2345353F1E836DBB00BBC1EF /* HRHUDManager.m */; };
 		23E6B92C1E821134000E6E25 /* CALayer+WaveLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9031E821134000E6E25 /* CALayer+WaveLine.m */; };
 		23E6B92D1E821134000E6E25 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9061E821134000E6E25 /* UIImage+ImageEffects.m */; };
 		23E6B92E1E821134000E6E25 /* UIImageView+BlurEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9081E821134000E6E25 /* UIImageView+BlurEffects.m */; };
@@ -65,6 +66,9 @@
 
 /* Begin PBXFileReference section */
 		234535291E8360B800BBC1EF /* CommonConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonConfiguration.h; sourceTree = "<group>"; };
+		2345353E1E836DBB00BBC1EF /* HRHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRHUDManager.h; sourceTree = "<group>"; };
+		2345353F1E836DBB00BBC1EF /* HRHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRHUDManager.m; sourceTree = "<group>"; };
+		234535421E836E3000BBC1EF /* NetworkingConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingConfiguration.h; sourceTree = "<group>"; };
 		23E6B9021E821134000E6E25 /* CALayer+WaveLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+WaveLine.h"; sourceTree = "<group>"; };
 		23E6B9031E821134000E6E25 /* CALayer+WaveLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+WaveLine.m"; sourceTree = "<group>"; };
 		23E6B9051E821134000E6E25 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -171,6 +175,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2345353D1E836DBB00BBC1EF /* HUDManager */ = {
+			isa = PBXGroup;
+			children = (
+				2345353E1E836DBB00BBC1EF /* HRHUDManager.h */,
+				2345353F1E836DBB00BBC1EF /* HRHUDManager.m */,
+			);
+			path = HUDManager;
+			sourceTree = "<group>";
+		};
+		234535411E836E1200BBC1EF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				234535421E836E3000BBC1EF /* NetworkingConfiguration.h */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		23E6B8FF1E820B9E000E6E25 /* HRCocoaKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +209,7 @@
 				23F02AEE1E810F0A007618D9 /* AppDelegate.m */,
 				23E6B9711E821512000E6E25 /* HomeViewController.h */,
 				23E6B9721E821512000E6E25 /* HomeViewController.m */,
+				234535411E836E1200BBC1EF /* Networking */,
 				23E6B9741E822414000E6E25 /* HRViewModelVC */,
 				23E6B96C1E82137D000E6E25 /* StorageProperty */,
 			);
@@ -278,6 +300,7 @@
 		23E6B9461E8212C6000E6E25 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				2345353D1E836DBB00BBC1EF /* HUDManager */,
 				23E6B9681E821339000E6E25 /* StorageManager */,
 				23E6B9641E82132E000E6E25 /* RSA */,
 				23E6B95A1E821322000E6E25 /* HRViewModel */,
@@ -475,8 +498,7 @@
 				TargetAttributes = {
 					23F02AE61E810F0A007618D9 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = ZWQRUNTJ24;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					23F02AFF1E810F0A007618D9 = {
 						CreatedOnToolsVersion = 8.2;
@@ -598,6 +620,7 @@
 				23E6B97D1E82243C000E6E25 /* WaterflowViewController.m in Sources */,
 				23E6B9331E821134000E6E25 /* NSString+Timestamp.m in Sources */,
 				23E6B9341E821134000E6E25 /* NSArray+Safe.m in Sources */,
+				234535401E836DBB00BBC1EF /* HRHUDManager.m in Sources */,
 				23E6B9391E821134000E6E25 /* UITextField+Placeholder.m in Sources */,
 				23E6B9611E821322000E6E25 /* HRCollectionViewModel.m in Sources */,
 				23E6B9351E821134000E6E25 /* NSMutableArray+Safe.m in Sources */,
@@ -733,7 +756,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = ZWQRUNTJ24;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HRCocoaKit/HRCocoaKit/Common/CommonConfiguration.h";
 				INFOPLIST_FILE = HRCocoaKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -749,7 +772,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = ZWQRUNTJ24;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HRCocoaKit/HRCocoaKit/Common/CommonConfiguration.h";
 				INFOPLIST_FILE = HRCocoaKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
