@@ -8,7 +8,7 @@
 
 #import "CollectionViewController.h"
 #import "HRCollectionViewModel.h"
-
+#import "CommonDefine.h"
 @interface CollectionViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray <HRCollectionViewModel *> *sectionModelArray;

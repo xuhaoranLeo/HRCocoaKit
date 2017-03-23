@@ -86,7 +86,7 @@ static NSString * const FileName = @"LocalStorage";
         total += [[[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil] fileSize]
         ;
     }
-    return total;
+    return @(total).integerValue;
 }
 
 #pragma mark - getter

@@ -20,10 +20,10 @@ Pod::Spec.new do |s|
   s.dependency "Masonry"
   s.dependency "MBProgressHUD", "~> 1.0.0"
   s.dependency "SAMKeychain"
-  s.prefix_header_contents = <<-EOS
- 	#ifdef __OBJC__
- 	#import "CommonConfiguration.h"
- 	#endif 
-  EOS
+  # s.prefix_header_contents = <<-EOS
+ 	#   ifdef __OBJC__
+ 	#   import "CommonConfiguration.h"
+ 	#   endif 
+  # EOS
 
 end

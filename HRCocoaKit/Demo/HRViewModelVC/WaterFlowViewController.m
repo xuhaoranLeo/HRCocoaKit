@@ -8,7 +8,7 @@
 
 #import "WaterflowViewController.h"
 #import "HRWaterflowLayout.h"
-
+#import "CommonDefine.h"
 @interface WaterflowViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,HRWaterflowLayoutDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
 
