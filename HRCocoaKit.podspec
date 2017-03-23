@@ -7,10 +7,10 @@ Pod::Spec.new do |s|
   s.summary      = "An Objective-C library for FiberhomeCloud by Xu Haoran"
   s.homepage     = "https://github.com/xuhaoranLeo"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author             = { "许昊然" => "liang_andy@163.com" }
+  s.author       = { "许昊然" => "xuhaoranleo@163.com" }
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/xuhaoranLeo/HRCocoaKit.git", :tag => "#{s.version}" }
-  s.source_files  = "HRCocoaKit/**/*.{h,m}"
+  s.source_files  = "HRCocoaKit/HRCocoaKit/**/*.{h,m}"
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
   # s.framework  = "SomeFramework"
