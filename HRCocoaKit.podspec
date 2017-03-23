@@ -10,13 +10,20 @@ Pod::Spec.new do |s|
   s.author             = { "许昊然" => "liang_andy@163.com" }
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/xuhaoranLeo/HRCocoaKit.git", :tag => "#{s.version}" }
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.source_files  = "HRCocoaKit/**/*.{h,m}"
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
   s.requires_arc = true
-  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "JSONKit", "~> 1.4"
+  s.dependency "AFNetworking", "~> 3.0"
+  s.dependency "Masonry"
+  s.dependency "MBProgressHUD", "~> 1.0.0"
+  s.dependency "SAMKeychain"
+  s.prefix_header_contents = <<-EOS
+ 	#ifdef __OBJC__
+ 	#import "CommonConfiguration.h"
+ 	#endif 
+  EOS
 
 end

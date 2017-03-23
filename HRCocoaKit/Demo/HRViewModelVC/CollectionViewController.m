@@ -7,7 +7,6 @@
 //
 
 #import "CollectionViewController.h"
-#import "CommonDefine.h"
 #import "HRCollectionViewModel.h"
 
 @interface CollectionViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>

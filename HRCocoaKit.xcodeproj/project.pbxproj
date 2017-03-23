@@ -50,6 +50,7 @@
 		23F02AEF1E810F0A007618D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F02AEE1E810F0A007618D9 /* AppDelegate.m */; };
 		23F02AF71E810F0A007618D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F02AF61E810F0A007618D9 /* Assets.xcassets */; };
 		23F02B051E810F0A007618D9 /* HRCocoaKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F02B041E810F0A007618D9 /* HRCocoaKitTests.m */; };
+		70D9861009F26C10A3EDCA60 /* libPods-HRCocoaKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB17C0479DE7739328AADB9C /* libPods-HRCocoaKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		234535291E8360B800BBC1EF /* CommonConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonConfiguration.h; sourceTree = "<group>"; };
 		23E6B9021E821134000E6E25 /* CALayer+WaveLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+WaveLine.h"; sourceTree = "<group>"; };
 		23E6B9031E821134000E6E25 /* CALayer+WaveLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+WaveLine.m"; sourceTree = "<group>"; };
 		23E6B9051E821134000E6E25 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -145,6 +147,9 @@
 		23F02B001E810F0A007618D9 /* HRCocoaKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HRCocoaKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F02B041E810F0A007618D9 /* HRCocoaKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRCocoaKitTests.m; sourceTree = "<group>"; };
 		23F02B061E810F0A007618D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A93A56A091D4377850E4260 /* Pods-HRCocoaKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HRCocoaKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-HRCocoaKit/Pods-HRCocoaKit.release.xcconfig"; sourceTree = "<group>"; };
+		AB17C0479DE7739328AADB9C /* libPods-HRCocoaKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HRCocoaKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD7542DE8695732D623C4248 /* Pods-HRCocoaKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HRCocoaKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HRCocoaKit/Pods-HRCocoaKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70D9861009F26C10A3EDCA60 /* libPods-HRCocoaKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				23E6B9411E821198000E6E25 /* CommonDefine.h */,
+				234535291E8360B800BBC1EF /* CommonConfiguration.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -263,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				23E6B9441E8211FE000E6E25 /* UIKit.framework */,
+				AB17C0479DE7739328AADB9C /* libPods-HRCocoaKit.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -364,6 +372,7 @@
 				23F02B031E810F0A007618D9 /* HRCocoaKitTests */,
 				23F02AE81E810F0A007618D9 /* Products */,
 				23E6B9431E8211FD000E6E25 /* Frameworks */,
+				A59F85FAC2DC3E5B0A89F712 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -405,6 +414,15 @@
 			path = HRCocoaKitTests;
 			sourceTree = "<group>";
 		};
+		A59F85FAC2DC3E5B0A89F712 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD7542DE8695732D623C4248 /* Pods-HRCocoaKit.debug.xcconfig */,
+				9A93A56A091D4377850E4260 /* Pods-HRCocoaKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -412,9 +430,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23F02B091E810F0A007618D9 /* Build configuration list for PBXNativeTarget "HRCocoaKit" */;
 			buildPhases = (
+				F7011BB08EB1DF5B99FF9800 /* [CP] Check Pods Manifest.lock */,
 				23F02AE31E810F0A007618D9 /* Sources */,
 				23F02AE41E810F0A007618D9 /* Frameworks */,
 				23F02AE51E810F0A007618D9 /* Resources */,
+				BC751F0585CF8C3EEAAD354F /* [CP] Embed Pods Frameworks */,
+				0A0BB8C8D1C263F82D250239 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -509,6 +530,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A0BB8C8D1C263F82D250239 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HRCocoaKit/Pods-HRCocoaKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC751F0585CF8C3EEAAD354F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HRCocoaKit/Pods-HRCocoaKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7011BB08EB1DF5B99FF9800 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		23F02AE31E810F0A007618D9 /* Sources */ = {
@@ -660,10 +729,12 @@
 		};
 		23F02B0A1E810F0A007618D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD7542DE8695732D623C4248 /* Pods-HRCocoaKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = ZWQRUNTJ24;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HRCocoaKit/HRCocoaKit/Common/CommonConfiguration.h";
 				INFOPLIST_FILE = HRCocoaKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -674,10 +745,12 @@
 		};
 		23F02B0B1E810F0A007618D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A93A56A091D4377850E4260 /* Pods-HRCocoaKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = ZWQRUNTJ24;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HRCocoaKit/HRCocoaKit/Common/CommonConfiguration.h";
 				INFOPLIST_FILE = HRCocoaKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

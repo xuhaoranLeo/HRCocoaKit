@@ -8,7 +8,6 @@
 
 #import "TableViewController.h"
 #import "HRTableViewModel.h"
-#import "CommonDefine.h"
 
 @interface TableViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
