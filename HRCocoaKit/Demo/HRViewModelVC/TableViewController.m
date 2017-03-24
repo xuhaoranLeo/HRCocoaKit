@@ -81,7 +81,7 @@
         return cell;
     }];
     [cellModel setSelectCellBlock:^(NSIndexPath *indexPath, UITableView *tableView) {
-        NSLog(@"section: %li, row: %li", indexPath.section, indexPath.row);
+        NSLog(@"section: %li, row: %li", (long)indexPath.section, (long)indexPath.row);
     }];
 }
 
@@ -98,11 +98,11 @@
             if (cell == nil) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Section2Cell"];
             }
-            cell.textLabel.text = [NSString stringWithFormat:@"section: %li, row: %li", indexPath.section, indexPath.row];
+            cell.textLabel.text = [NSString stringWithFormat:@"section: %li, row: %li", (long)indexPath.section, (long)indexPath.row];
             return cell;
         }];
         [cellModel setSelectCellBlock:^(NSIndexPath *indexPath, UITableView *tableView) {
-            NSLog(@"section: %li, row: %li", indexPath.section, indexPath.row);
+            NSLog(@"section: %li, row: %li", (long)indexPath.section, (long)indexPath.row);
         }];
     }
 }
@@ -124,7 +124,7 @@
         return cell;
     }];
     [cellModel setSelectCellBlock:^(NSIndexPath *indexPath, UITableView *tableView) {
-        NSLog(@"section: %li, row: %li", indexPath.section, indexPath.row);
+        NSLog(@"section: %li, row: %li", (long)indexPath.section, (long)indexPath.row);
     }];
 }
 

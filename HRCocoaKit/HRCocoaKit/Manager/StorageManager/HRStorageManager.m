@@ -72,7 +72,7 @@ static NSString * const FileName = @"LocalStorage";
     [HRStorageManager removeAllCacheExceptStorageType:nil finish:finish];
 }
 
-+ (NSInteger)calculateCacheSize {
++ (long long)calculateCacheSize {
     HRStorageManager *mamager = [HRStorageManager sharedManager];
     NSFileManager *manager = [NSFileManager defaultManager];
     if (![manager fileExistsAtPath:mamager.storagePath]) {
@@ -86,7 +86,7 @@ static NSString * const FileName = @"LocalStorage";
         total += [[[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil] fileSize]
         ;
     }
-    return @(total).integerValue;
+    return total;
 }
 
 #pragma mark - getter

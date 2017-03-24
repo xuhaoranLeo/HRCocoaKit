@@ -58,5 +58,5 @@
 
  @return 大小（字节）
  */
-+ (NSInteger)calculateCacheSize;
++ (long long)calculateCacheSize;
 @end

@@ -40,7 +40,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    NSLog(@"section: %li, item: %li", indexPath.section, indexPath.item);
+    NSLog(@"section: %li, item: %li", (long)indexPath.section, (long)indexPath.item);
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {

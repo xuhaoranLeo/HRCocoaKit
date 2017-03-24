@@ -95,7 +95,7 @@
         return cell;
     }];
     [cellModel setSelectCellBlock:^(NSIndexPath *indexPath, UICollectionView *collectionView) {
-        NSLog(@"section: %li, item: %li", indexPath.section, indexPath.item);
+        NSLog(@"section: %li, item: %li", (long)indexPath.section, (long)indexPath.item);
     }];
 }
 
@@ -139,7 +139,7 @@
         return cell;
     }];
     [cellModel setSelectCellBlock:^(NSIndexPath *indexPath, UICollectionView *collectionView) {
-        NSLog(@"section: %li, item: %li", indexPath.section, indexPath.item);
+        NSLog(@"section: %li, item: %li", (long)indexPath.section, indexPath.item);
     }];
 }
 

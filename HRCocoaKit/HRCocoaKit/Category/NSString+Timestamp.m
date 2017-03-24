@@ -77,10 +77,10 @@
         timeStr = [dateFormatter stringFromDate:date];
     } else if (interval >= 60* 60) {
         tt = interval/3600;
-        timeStr = [NSString stringWithFormat:@"%lu小时前", tt];
+        timeStr = [NSString stringWithFormat:@"%lu小时前", (unsigned long)tt];
     } else if (interval >= 60 && interval < 60*60) {
         tt = interval/60;
-        timeStr = [NSString stringWithFormat:@"%lu分钟前", tt];
+        timeStr = [NSString stringWithFormat:@"%lu分钟前", (unsigned long)tt];
     }
     else if (interval < 60 ) {
         timeStr = @"刚刚";

@@ -45,5 +45,5 @@ typedef void(^CacheSizeBlcok)(NSInteger size, BOOL success);
  *
  *  @return 缓存大小
  */
-- (NSInteger)calculateCacheSize;
+- (long long)calculateCacheSize;
 @end

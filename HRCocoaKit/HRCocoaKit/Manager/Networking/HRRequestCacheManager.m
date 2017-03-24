@@ -83,7 +83,7 @@ static NSString * const DataKey      = @"data";
     });
 }
 
-- (NSInteger)calculateCacheSize {
+- (long long)calculateCacheSize {
     NSFileManager *manager = [NSFileManager defaultManager];
     if (![manager fileExistsAtPath:self.cachePath]) {
         return 0;

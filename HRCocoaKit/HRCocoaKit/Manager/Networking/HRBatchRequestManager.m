@@ -7,7 +7,7 @@
 //
 
 #import "HRBatchRequestManager.h"
-#import "HRHUDManager.h"
+#import "HRCocoaKit.h"
 
 @interface HRBatchRequestManager ()
 @property (nonatomic, strong) NSMutableArray *requestArray;
