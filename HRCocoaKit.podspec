@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "HRCocoaKit"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.license      = 'MIT'
   s.summary      = "An Objective-C library for FiberhomeCloud by Xu Haoran"
   s.homepage     = "https://github.com/xuhaoranLeo/HRCocoaKit"
@@ -77,6 +77,7 @@ Pod::Spec.new do |s|
   s.subspec 'HRQrCodeViewController' do |ss|
     ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/HRQrCodeViewController/*.{h,m,xib,bundle}'
     ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/HRQrCodeViewController/HRQrCodeViewController.h'
+    ss.ios.frameworks = 'AVFoundation'
   end
 
   s.dependency "AFNetworking", "~> 3.0"

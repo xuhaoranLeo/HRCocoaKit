@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		234535401E836DBB00BBC1EF /* HRHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2345353F1E836DBB00BBC1EF /* HRHUDManager.m */; };
 		2395C0CC1E84C43A007BF7B4 /* HRQrCodeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2395C0CB1E84C43A007BF7B4 /* HRQrCodeViewController.bundle */; };
+		2395C0CE1E84C4F8007BF7B4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2395C0CD1E84C4F8007BF7B4 /* AVFoundation.framework */; };
 		23E6B92C1E821134000E6E25 /* CALayer+WaveLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9031E821134000E6E25 /* CALayer+WaveLine.m */; };
 		23E6B92D1E821134000E6E25 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9061E821134000E6E25 /* UIImage+ImageEffects.m */; };
 		23E6B92E1E821134000E6E25 /* UIImageView+BlurEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9081E821134000E6E25 /* UIImageView+BlurEffects.m */; };
@@ -64,6 +65,7 @@
 		2345353F1E836DBB00BBC1EF /* HRHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRHUDManager.m; sourceTree = "<group>"; };
 		234535421E836E3000BBC1EF /* NetworkingConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingConfiguration.h; sourceTree = "<group>"; };
 		2395C0CB1E84C43A007BF7B4 /* HRQrCodeViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HRQrCodeViewController.bundle; sourceTree = "<group>"; };
+		2395C0CD1E84C4F8007BF7B4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		23C4645D1E84A72A003EBAC6 /* HRCocoaKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRCocoaKit.h; sourceTree = "<group>"; };
 		23E6B9021E821134000E6E25 /* CALayer+WaveLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+WaveLine.h"; sourceTree = "<group>"; };
 		23E6B9031E821134000E6E25 /* CALayer+WaveLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+WaveLine.m"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2395C0CE1E84C4F8007BF7B4 /* AVFoundation.framework in Frameworks */,
 				70D9861009F26C10A3EDCA60 /* libPods-HRCocoaKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +284,7 @@
 		23E6B9431E8211FD000E6E25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2395C0CD1E84C4F8007BF7B4 /* AVFoundation.framework */,
 				23E6B9441E8211FE000E6E25 /* UIKit.framework */,
 				AB17C0479DE7739328AADB9C /* libPods-HRCocoaKit.a */,
 			);
