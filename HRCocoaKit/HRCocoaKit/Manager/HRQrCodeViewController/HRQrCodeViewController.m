@@ -46,7 +46,6 @@
     if (metadataObjects != nil && [metadataObjects count] > 0) {
         AVMetadataMachineReadableCodeObject *metadataObj = [metadataObjects lastObject];
         if ([[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode] && [metadataObj isKindOfClass:[AVMetadataMachineReadableCodeObject class]]) {
-            
             self.resultLabel.text = @"扫描成功";
             NSString *result = [metadataObjects.lastObject stringValue];
             [self stopScan];

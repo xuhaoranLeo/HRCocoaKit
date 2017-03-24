@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "HRCocoaKit"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.license      = 'MIT'
   s.summary      = "An Objective-C library for FiberhomeCloud by Xu Haoran"
   s.homepage     = "https://github.com/xuhaoranLeo/HRCocoaKit"
@@ -14,44 +14,14 @@ Pod::Spec.new do |s|
   s.source_files = 'HRCocoaKit/HRCocoaKit/HRCocoaKit.h'
   s.ios.deployment_target = '8.0'
 
-  # s.subspec 'Category' do |ss|
-  #   ss.source_files = 'HRCocoaKit/*+*.{h,m}'
-  #   ss.public_header_files = 'HRCocoaKit/*+*.h'
-  # end
-
-  # s.subspec 'HUDManager' do |ss|
-  #   ss.source_files = 'HRCocoaKit/HRHUDManager.{h,m}'
-  #   ss.public_header_files = 'HRCocoaKit/HRHUDManager.h'
-  # end
-
-  # s.subspec 'StorageManager' do |ss|
-  #   ss.source_files = 'HRCocoaKit/HRStorageManager.{h,m}'
-  #   ss.public_header_files = 'HRCocoaKit/HRStorageManager.h'
-  # end
-
-  # s.subspec 'RSA' do |ss|
-  #   ss.source_files = 'HRCocoaKit/RSA.{h,m}'
-  #   ss.public_header_files = 'HRCocoaKit/RSA.h'
-  # end
-
-  # s.subspec 'HRViewModel' do |ss|
-  #   ss.source_files = 'HRCocoaKit/HR{CollectionViewModel,HRTableViewModel,HRWaterflowLayout}.{h,m}'
-  #   ss.public_header_files = 'HRCocoaKit/HR{CollectionViewModel,HRTableViewModel,HRWaterflowLayout}.h'
-  # end
-
-  # s.subspec 'HRQrCodeViewController' do |ss|
-  #   ss.source_files = 'HRCocoaKit/{HRQrCodeViewController,source}.{h,m,xib,bundle}'
-  #   ss.public_header_files = 'HRCocoaKit/HRQrCodeViewController.h'
-  # end
-
-  # s.subspec 'HRQrCodeViewController' do |ss|
-  #   ss.source_files = 'HRCocoaKit/{CommonDefine}.h'
-  #   ss.public_header_files = 'HRCocoaKit/{CommonDefine}.h'
-  # end
-
   s.subspec 'Category' do |ss|
     ss.source_files = 'HRCocoaKit/HRCocoaKit/Category/*.{h,m}', 'HRCocoaKit/HRCocoaKit/Category/Effect/*.{h,m}', 'HRCocoaKit/HRCocoaKit/Category/Safe/*.{h,m}'
     ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Category/*.h', 'HRCocoaKit/HRCocoaKit/Category/Effect/*.h', 'HRCocoaKit/HRCocoaKit/Category/Safe/*.h'
+  end
+
+  s.subspec 'Common' do |ss|
+    ss.source_files = 'HRCocoaKit/HRCocoaKit/Common/CommonDefine.h'
+    ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Common/CommonDefine.h'
   end
 
   s.subspec 'HUDManager' do |ss|
@@ -75,9 +45,30 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'HRQrCodeViewController' do |ss|
-    ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/HRQrCodeViewController/*.{h,m,xib,bundle}'
+    ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/HRQrCodeViewController/*.{h,m}'
     ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/HRQrCodeViewController/HRQrCodeViewController.h'
     ss.ios.frameworks = 'AVFoundation'
+    ss.resources = 'HRCocoaKit/HRCocoaKit/Manager/HRQrCodeViewController/HRQrCodeViewController.bundle', 'HRCocoaKit/HRCocoaKit/Manager/HRQrCodeViewController/HRQrCodeViewController.xib'
+  end
+
+  s.subspec 'HRPopupMenuView' do |ss|
+    ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/HRPopupMenuView/*.{h,m}'
+    ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/HRPopupMenuView/*.h'
+  end
+
+  s.subspec 'SecurityManager' do |ss|
+    ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/SecurityManager/*.{h,m}'
+    ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/SecurityManager/*.h'
+  end
+
+  s.subspec 'AuthorityManager' do |ss|
+    ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/AuthorityManager/*.{h,m}'
+    ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/AuthorityManager/*.h'
+  end
+  
+  s.subspec 'Networking' do |ss|
+    ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/Networking/*.{h,m}'
+    ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/Networking/*.h'
   end
 
   s.dependency "AFNetworking", "~> 3.0"

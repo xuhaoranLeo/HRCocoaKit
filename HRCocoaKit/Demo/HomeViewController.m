@@ -12,6 +12,9 @@
 #import "CollectionViewController.h"
 #import "TableViewController.h"
 #import "WaterflowViewController.h"
+#import "NetworkingViewController.h"
+#import "PopupMenuViewController.h"
+#import "SecurityLoginViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -68,6 +71,21 @@
             [self showViewController:svc sender:nil];
         }
             break;
+        case 4: {
+            NetworkingViewController *svc = [NetworkingViewController new];
+            [self showViewController:svc sender:nil];
+        }
+            break;
+        case 5: {
+            PopupMenuViewController *svc = [PopupMenuViewController new];
+            [self showViewController:svc sender:nil];
+        }
+            break;
+        case 6: {
+            SecurityLoginViewController *svc = [SecurityLoginViewController new];
+            [self showViewController:svc sender:nil];
+        }
+            break;
         default:
             break;
     }
@@ -91,7 +109,10 @@
         _dataList = @[@"本地存储-HRStorageManager",
                       @"tableview模型-HRTableViewModel",
                       @"collectionView模型-HRCollectionViewModel",
-                      @"waterflow模型-HRWaterflowLayout"];
+                      @"waterflow模型-HRWaterflowLayout",
+                      @"网络请求",
+                      @"下拉弹窗",
+                      @"本地记录密码获取deviceid"];
     }
     return _dataList;
 }

@@ -8,8 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		234535401E836DBB00BBC1EF /* HRHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2345353F1E836DBB00BBC1EF /* HRHUDManager.m */; };
-		2395C0CC1E84C43A007BF7B4 /* HRQrCodeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2395C0CB1E84C43A007BF7B4 /* HRQrCodeViewController.bundle */; };
+		2362D5D61E84F0E80078C3EC /* HRBatchRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5CB1E84F0E80078C3EC /* HRBatchRequestManager.m */; };
+		2362D5D71E84F0E80078C3EC /* HRHttpRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5CD1E84F0E80078C3EC /* HRHttpRequestGenerator.m */; };
+		2362D5D81E84F0E80078C3EC /* HRHttpRequestProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5CF1E84F0E80078C3EC /* HRHttpRequestProxy.m */; };
+		2362D5D91E84F0E80078C3EC /* HRRequestCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5D11E84F0E80078C3EC /* HRRequestCacheManager.m */; };
+		2362D5DA1E84F0E80078C3EC /* HRRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5D31E84F0E80078C3EC /* HRRequestManager.m */; };
+		2362D5DB1E84F0E80078C3EC /* NSDate+TimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5D51E84F0E80078C3EC /* NSDate+TimeStamp.m */; };
+		2362D5E41E84FCF60078C3EC /* HRCocoaKitDemoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5E31E84FCF60078C3EC /* HRCocoaKitDemoRequest.m */; };
+		2362D5EB1E84FE2B0078C3EC /* TestGETMethodAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5EA1E84FE2B0078C3EC /* TestGETMethodAPI.m */; };
+		2362D5EE1E8500230078C3EC /* TestPOSTMethodAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5ED1E8500230078C3EC /* TestPOSTMethodAPI.m */; };
+		2362D5F11E8500320078C3EC /* TestUploadAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5F01E8500320078C3EC /* TestUploadAPI.m */; };
+		2362D5F81E85043B0078C3EC /* NetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5F61E85043B0078C3EC /* NetworkingViewController.m */; };
+		2362D5F91E85043B0078C3EC /* NetworkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2362D5F71E85043B0078C3EC /* NetworkingViewController.xib */; };
+		2362D5FD1E8509CE0078C3EC /* HRAuthorityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5FC1E8509CE0078C3EC /* HRAuthorityManager.m */; };
+		2362D6011E850D440078C3EC /* HRSecurityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D6001E850D440078C3EC /* HRSecurityManager.m */; };
+		2362D60B1E8518E60078C3EC /* HRPopupMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D6041E8518E60078C3EC /* HRPopupMenuCell.m */; };
+		2362D60C1E8518E60078C3EC /* HRPopupMenuManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D6061E8518E60078C3EC /* HRPopupMenuManager.m */; };
+		2362D60D1E8518E60078C3EC /* HRPopupMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D6081E8518E60078C3EC /* HRPopupMenuModel.m */; };
+		2362D60E1E8518E60078C3EC /* HRPopupMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D60A1E8518E60078C3EC /* HRPopupMenuView.m */; };
+		2362D6161E8519FA0078C3EC /* PopupMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D6141E8519FA0078C3EC /* PopupMenuViewController.m */; };
+		2362D6171E8519FA0078C3EC /* PopupMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2362D6151E8519FA0078C3EC /* PopupMenuViewController.xib */; };
+		2362D61E1E851D5E0078C3EC /* SecurityLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D61C1E851D5E0078C3EC /* SecurityLoginViewController.m */; };
+		2362D61F1E851D5E0078C3EC /* SecurityLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2362D61D1E851D5E0078C3EC /* SecurityLoginViewController.xib */; };
 		2395C0CE1E84C4F8007BF7B4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2395C0CD1E84C4F8007BF7B4 /* AVFoundation.framework */; };
+		2395C0D01E84C7B4007BF7B4 /* HRQrCodeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2395C0CF1E84C7B4007BF7B4 /* HRQrCodeViewController.bundle */; };
 		23E6B92C1E821134000E6E25 /* CALayer+WaveLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9031E821134000E6E25 /* CALayer+WaveLine.m */; };
 		23E6B92D1E821134000E6E25 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9061E821134000E6E25 /* UIImage+ImageEffects.m */; };
 		23E6B92E1E821134000E6E25 /* UIImageView+BlurEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9081E821134000E6E25 /* UIImageView+BlurEffects.m */; };
@@ -64,8 +86,50 @@
 		2345353E1E836DBB00BBC1EF /* HRHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRHUDManager.h; sourceTree = "<group>"; };
 		2345353F1E836DBB00BBC1EF /* HRHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRHUDManager.m; sourceTree = "<group>"; };
 		234535421E836E3000BBC1EF /* NetworkingConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingConfiguration.h; sourceTree = "<group>"; };
-		2395C0CB1E84C43A007BF7B4 /* HRQrCodeViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HRQrCodeViewController.bundle; sourceTree = "<group>"; };
+		2362D5CA1E84F0E80078C3EC /* HRBatchRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRBatchRequestManager.h; sourceTree = "<group>"; };
+		2362D5CB1E84F0E80078C3EC /* HRBatchRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRBatchRequestManager.m; sourceTree = "<group>"; };
+		2362D5CC1E84F0E80078C3EC /* HRHttpRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRHttpRequestGenerator.h; sourceTree = "<group>"; };
+		2362D5CD1E84F0E80078C3EC /* HRHttpRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRHttpRequestGenerator.m; sourceTree = "<group>"; };
+		2362D5CE1E84F0E80078C3EC /* HRHttpRequestProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRHttpRequestProxy.h; sourceTree = "<group>"; };
+		2362D5CF1E84F0E80078C3EC /* HRHttpRequestProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRHttpRequestProxy.m; sourceTree = "<group>"; };
+		2362D5D01E84F0E80078C3EC /* HRRequestCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRRequestCacheManager.h; sourceTree = "<group>"; };
+		2362D5D11E84F0E80078C3EC /* HRRequestCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRRequestCacheManager.m; sourceTree = "<group>"; };
+		2362D5D21E84F0E80078C3EC /* HRRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRRequestManager.h; sourceTree = "<group>"; };
+		2362D5D31E84F0E80078C3EC /* HRRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRRequestManager.m; sourceTree = "<group>"; };
+		2362D5D41E84F0E80078C3EC /* NSDate+TimeStamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeStamp.h"; sourceTree = "<group>"; };
+		2362D5D51E84F0E80078C3EC /* NSDate+TimeStamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeStamp.m"; sourceTree = "<group>"; };
+		2362D5E21E84FCF60078C3EC /* HRCocoaKitDemoRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRCocoaKitDemoRequest.h; sourceTree = "<group>"; };
+		2362D5E31E84FCF60078C3EC /* HRCocoaKitDemoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRCocoaKitDemoRequest.m; sourceTree = "<group>"; };
+		2362D5E91E84FE2B0078C3EC /* TestGETMethodAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestGETMethodAPI.h; sourceTree = "<group>"; };
+		2362D5EA1E84FE2B0078C3EC /* TestGETMethodAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestGETMethodAPI.m; sourceTree = "<group>"; };
+		2362D5EC1E8500230078C3EC /* TestPOSTMethodAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPOSTMethodAPI.h; sourceTree = "<group>"; };
+		2362D5ED1E8500230078C3EC /* TestPOSTMethodAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPOSTMethodAPI.m; sourceTree = "<group>"; };
+		2362D5EF1E8500320078C3EC /* TestUploadAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUploadAPI.h; sourceTree = "<group>"; };
+		2362D5F01E8500320078C3EC /* TestUploadAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUploadAPI.m; sourceTree = "<group>"; };
+		2362D5F51E85043B0078C3EC /* NetworkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingViewController.h; sourceTree = "<group>"; };
+		2362D5F61E85043B0078C3EC /* NetworkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingViewController.m; sourceTree = "<group>"; };
+		2362D5F71E85043B0078C3EC /* NetworkingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkingViewController.xib; sourceTree = "<group>"; };
+		2362D5FB1E8509CE0078C3EC /* HRAuthorityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRAuthorityManager.h; sourceTree = "<group>"; };
+		2362D5FC1E8509CE0078C3EC /* HRAuthorityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRAuthorityManager.m; sourceTree = "<group>"; };
+		2362D5FF1E850D440078C3EC /* HRSecurityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRSecurityManager.h; sourceTree = "<group>"; };
+		2362D6001E850D440078C3EC /* HRSecurityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRSecurityManager.m; sourceTree = "<group>"; };
+		2362D6031E8518E60078C3EC /* HRPopupMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRPopupMenuCell.h; sourceTree = "<group>"; };
+		2362D6041E8518E60078C3EC /* HRPopupMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRPopupMenuCell.m; sourceTree = "<group>"; };
+		2362D6051E8518E60078C3EC /* HRPopupMenuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRPopupMenuManager.h; sourceTree = "<group>"; };
+		2362D6061E8518E60078C3EC /* HRPopupMenuManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRPopupMenuManager.m; sourceTree = "<group>"; };
+		2362D6071E8518E60078C3EC /* HRPopupMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRPopupMenuModel.h; sourceTree = "<group>"; };
+		2362D6081E8518E60078C3EC /* HRPopupMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRPopupMenuModel.m; sourceTree = "<group>"; };
+		2362D6091E8518E60078C3EC /* HRPopupMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRPopupMenuView.h; sourceTree = "<group>"; };
+		2362D60A1E8518E60078C3EC /* HRPopupMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRPopupMenuView.m; sourceTree = "<group>"; };
+		2362D6131E8519FA0078C3EC /* PopupMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupMenuViewController.h; sourceTree = "<group>"; };
+		2362D6141E8519FA0078C3EC /* PopupMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupMenuViewController.m; sourceTree = "<group>"; };
+		2362D6151E8519FA0078C3EC /* PopupMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupMenuViewController.xib; sourceTree = "<group>"; };
+		2362D61A1E851D3F0078C3EC /* HRCocoaKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = HRCocoaKit.entitlements; path = ../../HRCocoaKit.entitlements; sourceTree = "<group>"; };
+		2362D61B1E851D5E0078C3EC /* SecurityLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityLoginViewController.h; sourceTree = "<group>"; };
+		2362D61C1E851D5E0078C3EC /* SecurityLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityLoginViewController.m; sourceTree = "<group>"; };
+		2362D61D1E851D5E0078C3EC /* SecurityLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecurityLoginViewController.xib; sourceTree = "<group>"; };
 		2395C0CD1E84C4F8007BF7B4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2395C0CF1E84C7B4007BF7B4 /* HRQrCodeViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HRQrCodeViewController.bundle; sourceTree = "<group>"; };
 		23C4645D1E84A72A003EBAC6 /* HRCocoaKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRCocoaKit.h; sourceTree = "<group>"; };
 		23E6B9021E821134000E6E25 /* CALayer+WaveLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+WaveLine.h"; sourceTree = "<group>"; };
 		23E6B9031E821134000E6E25 /* CALayer+WaveLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+WaveLine.m"; sourceTree = "<group>"; };
@@ -181,8 +245,100 @@
 			isa = PBXGroup;
 			children = (
 				234535421E836E3000BBC1EF /* NetworkingConfiguration.h */,
+				2362D5E21E84FCF60078C3EC /* HRCocoaKitDemoRequest.h */,
+				2362D5E31E84FCF60078C3EC /* HRCocoaKitDemoRequest.m */,
+				2362D5F51E85043B0078C3EC /* NetworkingViewController.h */,
+				2362D5F61E85043B0078C3EC /* NetworkingViewController.m */,
+				2362D5F71E85043B0078C3EC /* NetworkingViewController.xib */,
+				2362D5E81E84FE100078C3EC /* API */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		2362D5C91E84F0E80078C3EC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2362D5CA1E84F0E80078C3EC /* HRBatchRequestManager.h */,
+				2362D5CB1E84F0E80078C3EC /* HRBatchRequestManager.m */,
+				2362D5CC1E84F0E80078C3EC /* HRHttpRequestGenerator.h */,
+				2362D5CD1E84F0E80078C3EC /* HRHttpRequestGenerator.m */,
+				2362D5CE1E84F0E80078C3EC /* HRHttpRequestProxy.h */,
+				2362D5CF1E84F0E80078C3EC /* HRHttpRequestProxy.m */,
+				2362D5D01E84F0E80078C3EC /* HRRequestCacheManager.h */,
+				2362D5D11E84F0E80078C3EC /* HRRequestCacheManager.m */,
+				2362D5D21E84F0E80078C3EC /* HRRequestManager.h */,
+				2362D5D31E84F0E80078C3EC /* HRRequestManager.m */,
+				2362D5D41E84F0E80078C3EC /* NSDate+TimeStamp.h */,
+				2362D5D51E84F0E80078C3EC /* NSDate+TimeStamp.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2362D5E81E84FE100078C3EC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2362D5E91E84FE2B0078C3EC /* TestGETMethodAPI.h */,
+				2362D5EA1E84FE2B0078C3EC /* TestGETMethodAPI.m */,
+				2362D5EC1E8500230078C3EC /* TestPOSTMethodAPI.h */,
+				2362D5ED1E8500230078C3EC /* TestPOSTMethodAPI.m */,
+				2362D5EF1E8500320078C3EC /* TestUploadAPI.h */,
+				2362D5F01E8500320078C3EC /* TestUploadAPI.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		2362D5FA1E8509CE0078C3EC /* AuthorityManager */ = {
+			isa = PBXGroup;
+			children = (
+				2362D5FB1E8509CE0078C3EC /* HRAuthorityManager.h */,
+				2362D5FC1E8509CE0078C3EC /* HRAuthorityManager.m */,
+			);
+			path = AuthorityManager;
+			sourceTree = "<group>";
+		};
+		2362D5FE1E850D440078C3EC /* SecurityManager */ = {
+			isa = PBXGroup;
+			children = (
+				2362D5FF1E850D440078C3EC /* HRSecurityManager.h */,
+				2362D6001E850D440078C3EC /* HRSecurityManager.m */,
+			);
+			path = SecurityManager;
+			sourceTree = "<group>";
+		};
+		2362D6021E8518E60078C3EC /* HRPopupMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				2362D6031E8518E60078C3EC /* HRPopupMenuCell.h */,
+				2362D6041E8518E60078C3EC /* HRPopupMenuCell.m */,
+				2362D6051E8518E60078C3EC /* HRPopupMenuManager.h */,
+				2362D6061E8518E60078C3EC /* HRPopupMenuManager.m */,
+				2362D6071E8518E60078C3EC /* HRPopupMenuModel.h */,
+				2362D6081E8518E60078C3EC /* HRPopupMenuModel.m */,
+				2362D6091E8518E60078C3EC /* HRPopupMenuView.h */,
+				2362D60A1E8518E60078C3EC /* HRPopupMenuView.m */,
+			);
+			path = HRPopupMenuView;
+			sourceTree = "<group>";
+		};
+		2362D60F1E8519640078C3EC /* PopupMenu */ = {
+			isa = PBXGroup;
+			children = (
+				2362D6131E8519FA0078C3EC /* PopupMenuViewController.h */,
+				2362D6141E8519FA0078C3EC /* PopupMenuViewController.m */,
+				2362D6151E8519FA0078C3EC /* PopupMenuViewController.xib */,
+			);
+			path = PopupMenu;
+			sourceTree = "<group>";
+		};
+		2362D6191E851D2A0078C3EC /* SecurityLogin */ = {
+			isa = PBXGroup;
+			children = (
+				2362D61A1E851D3F0078C3EC /* HRCocoaKit.entitlements */,
+				2362D61B1E851D5E0078C3EC /* SecurityLoginViewController.h */,
+				2362D61C1E851D5E0078C3EC /* SecurityLoginViewController.m */,
+				2362D61D1E851D5E0078C3EC /* SecurityLoginViewController.xib */,
+			);
+			path = SecurityLogin;
 			sourceTree = "<group>";
 		};
 		23E6B8FF1E820B9E000E6E25 /* HRCocoaKit */ = {
@@ -203,6 +359,8 @@
 				23F02AEE1E810F0A007618D9 /* AppDelegate.m */,
 				23E6B9711E821512000E6E25 /* HomeViewController.h */,
 				23E6B9721E821512000E6E25 /* HomeViewController.m */,
+				2362D6191E851D2A0078C3EC /* SecurityLogin */,
+				2362D60F1E8519640078C3EC /* PopupMenu */,
 				234535411E836E1200BBC1EF /* Networking */,
 				23E6B9741E822414000E6E25 /* HRViewModelVC */,
 				23E6B96C1E82137D000E6E25 /* StorageProperty */,
@@ -294,11 +452,15 @@
 		23E6B9461E8212C6000E6E25 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				2345353D1E836DBB00BBC1EF /* HUDManager */,
-				23E6B9681E821339000E6E25 /* StorageManager */,
-				23E6B9641E82132E000E6E25 /* RSA */,
-				23E6B95A1E821322000E6E25 /* HRViewModel */,
 				23E6B9471E8212D2000E6E25 /* HRQrCodeViewController */,
+				23E6B95A1E821322000E6E25 /* HRViewModel */,
+				23E6B9641E82132E000E6E25 /* RSA */,
+				23E6B9681E821339000E6E25 /* StorageManager */,
+				2345353D1E836DBB00BBC1EF /* HUDManager */,
+				2362D6021E8518E60078C3EC /* HRPopupMenuView */,
+				2362D5FE1E850D440078C3EC /* SecurityManager */,
+				2362D5FA1E8509CE0078C3EC /* AuthorityManager */,
+				2362D5C91E84F0E80078C3EC /* Networking */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -306,7 +468,7 @@
 		23E6B9471E8212D2000E6E25 /* HRQrCodeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2395C0CB1E84C43A007BF7B4 /* HRQrCodeViewController.bundle */,
+				2395C0CF1E84C7B4007BF7B4 /* HRQrCodeViewController.bundle */,
 				23E6B9481E8212D2000E6E25 /* HRQrCodeViewController.h */,
 				23E6B9491E8212D2000E6E25 /* HRQrCodeViewController.m */,
 				23E6B94A1E8212D2000E6E25 /* HRQrCodeViewController.xib */,
@@ -481,6 +643,11 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 5YEYTU2J43;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					23F02AFF1E810F0A007618D9 = {
 						CreatedOnToolsVersion = 8.2;
@@ -514,8 +681,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2395C0CC1E84C43A007BF7B4 /* HRQrCodeViewController.bundle in Resources */,
+				2395C0D01E84C7B4007BF7B4 /* HRQrCodeViewController.bundle in Resources */,
+				2362D5F91E85043B0078C3EC /* NetworkingViewController.xib in Resources */,
+				2362D6171E8519FA0078C3EC /* PopupMenuViewController.xib in Resources */,
 				23E6B9821E82257A000E6E25 /* StorageViewController.xib in Resources */,
+				2362D61F1E851D5E0078C3EC /* SecurityLoginViewController.xib in Resources */,
 				23E6B9531E8212D2000E6E25 /* HRQrCodeViewController.xib in Resources */,
 				23F02AF71E810F0A007618D9 /* Assets.xcassets in Resources */,
 			);
@@ -583,40 +753,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2362D5D91E84F0E80078C3EC /* HRRequestCacheManager.m in Sources */,
 				23E6B92D1E821134000E6E25 /* UIImage+ImageEffects.m in Sources */,
 				23E6B9521E8212D2000E6E25 /* HRQrCodeViewController.m in Sources */,
 				23E6B9771E822424000E6E25 /* CollectionViewController.m in Sources */,
+				2362D5F81E85043B0078C3EC /* NetworkingViewController.m in Sources */,
 				23E6B9311E821134000E6E25 /* NSString+CustomFormat.m in Sources */,
 				23F02AEF1E810F0A007618D9 /* AppDelegate.m in Sources */,
 				23E6B93F1E821134000E6E25 /* UIViewController+CurrentViewController.m in Sources */,
+				2362D5EE1E8500230078C3EC /* TestPOSTMethodAPI.m in Sources */,
 				23E6B9301E821134000E6E25 /* NSDictionary+UnicodePrint.m in Sources */,
 				23E6B9621E821322000E6E25 /* HRTableViewModel.m in Sources */,
+				2362D5F11E8500320078C3EC /* TestUploadAPI.m in Sources */,
+				2362D6161E8519FA0078C3EC /* PopupMenuViewController.m in Sources */,
 				23F02AEC1E810F0A007618D9 /* main.m in Sources */,
 				23E6B92C1E821134000E6E25 /* CALayer+WaveLine.m in Sources */,
+				2362D5DB1E84F0E80078C3EC /* NSDate+TimeStamp.m in Sources */,
 				23E6B9371E821134000E6E25 /* UINavigationBar+CustomColor.m in Sources */,
 				23E6B97D1E82243C000E6E25 /* WaterflowViewController.m in Sources */,
 				23E6B9331E821134000E6E25 /* NSString+Timestamp.m in Sources */,
 				23E6B9341E821134000E6E25 /* NSArray+Safe.m in Sources */,
 				234535401E836DBB00BBC1EF /* HRHUDManager.m in Sources */,
+				2362D60E1E8518E60078C3EC /* HRPopupMenuView.m in Sources */,
 				23E6B9391E821134000E6E25 /* UITextField+Placeholder.m in Sources */,
 				23E6B9611E821322000E6E25 /* HRCollectionViewModel.m in Sources */,
 				23E6B9351E821134000E6E25 /* NSMutableArray+Safe.m in Sources */,
 				23E6B93B1E821134000E6E25 /* UIView+CornerBorder.m in Sources */,
 				23E6B93D1E821134000E6E25 /* UIView+CustomMethod.m in Sources */,
 				23E6B93E1E821134000E6E25 /* UIView+KeyboardAnimation.m in Sources */,
+				2362D5EB1E84FE2B0078C3EC /* TestGETMethodAPI.m in Sources */,
+				2362D60C1E8518E60078C3EC /* HRPopupMenuManager.m in Sources */,
 				23E6B9381E821134000E6E25 /* UITableView+StretchHeaderView.m in Sources */,
+				2362D5D61E84F0E80078C3EC /* HRBatchRequestManager.m in Sources */,
 				23E6B9321E821134000E6E25 /* NSString+Empty.m in Sources */,
 				23E6B93A1E821134000E6E25 /* UITextField+ValidChar.m in Sources */,
 				23E6B97A1E822433000E6E25 /* TableViewController.m in Sources */,
+				2362D60D1E8518E60078C3EC /* HRPopupMenuModel.m in Sources */,
+				2362D5E41E84FCF60078C3EC /* HRCocoaKitDemoRequest.m in Sources */,
 				23E6B92F1E821134000E6E25 /* UIView+Screenshot.m in Sources */,
 				23E6B9731E821512000E6E25 /* HomeViewController.m in Sources */,
 				23E6B9361E821134000E6E25 /* UIImage+ColorSize.m in Sources */,
+				2362D5DA1E84F0E80078C3EC /* HRRequestManager.m in Sources */,
 				23E6B96B1E821339000E6E25 /* HRStorageManager.m in Sources */,
 				23E6B9811E82257A000E6E25 /* StorageViewController.m in Sources */,
 				23E6B92E1E821134000E6E25 /* UIImageView+BlurEffects.m in Sources */,
 				23E6B9671E82132E000E6E25 /* RSA.m in Sources */,
+				2362D5FD1E8509CE0078C3EC /* HRAuthorityManager.m in Sources */,
+				2362D5D71E84F0E80078C3EC /* HRHttpRequestGenerator.m in Sources */,
+				2362D61E1E851D5E0078C3EC /* SecurityLoginViewController.m in Sources */,
+				2362D6011E850D440078C3EC /* HRSecurityManager.m in Sources */,
+				2362D5D81E84F0E80078C3EC /* HRHttpRequestProxy.m in Sources */,
 				23E6B93C1E821134000E6E25 /* UIView+CustomLayout.m in Sources */,
 				23E6B9631E821322000E6E25 /* HRWaterflowLayout.m in Sources */,
+				2362D60B1E8518E60078C3EC /* HRPopupMenuCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,6 +922,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = HRCocoaKit/HRCocoaKit.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5YEYTU2J43;
 				GCC_PREFIX_HEADER = "";
@@ -750,6 +940,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = HRCocoaKit/HRCocoaKit.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5YEYTU2J43;
 				GCC_PREFIX_HEADER = "";

@@ -16,6 +16,10 @@
 #import "HRTableViewModel.h"
 #import "HRWaterflowLayout.h"
 #import "HRQrCodeViewController.h"
+#import "HRAuthorityManager.h"
+#import "HRSecurityManager.h"
+#import "HRPopupMenuManager.h"
+
 #import "CALayer+WaveLine.h"
 #import "UIView+Screenshot.h"
 #import "UIImageView+BlurEffects.h"
@@ -34,4 +38,7 @@
 #import "UITextField+ValidChar.h"
 #import "UIViewController+CurrentViewController.h"
 
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
 #endif
