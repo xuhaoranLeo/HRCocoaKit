@@ -31,33 +31,33 @@
     if (imageName.length > 0 && imageName) {
         [self.contentView addSubview:self.iconImageView];
         [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(10);
-            make.centerY.equalTo(0);
-            make.width.height.equalTo(20);
+            make.left.mas_equalTo(@(10));
+            make.centerY.mas_equalTo(@(0));
+            make.width.height.mas_equalTo(@(20));
         }];
         self.iconImageView.image = [UIImage imageNamed:imageName];
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.iconImageView.right).offset(5);
-            make.centerY.equalTo(0);
-            make.width.greaterThanOrEqualTo(30);
-            make.height.equalTo(20);
+            make.left.mas_equalTo(self.iconImageView.right).offset(@(5));
+            make.centerY.mas_equalTo(@(0));
+            make.width.mas_greaterThanOrEqualTo(@(30));
+            make.height.mas_equalTo(@(20));
         }];
         self.titleLabel.text = title;
     } else {
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.equalTo(self.contentView);
-            make.height.equalTo(20);
-            make.width.greaterThanOrEqualTo(30);
+            make.center.mas_equalTo(self.contentView);
+            make.height.mas_equalTo(@(20));
+            make.width.mas_greaterThanOrEqualTo(@(30));
         }];
         self.titleLabel.text = title;
     }
     UIImageView *line = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"common_line_bottom"]];
     [self.contentView addSubview:line];
     [line mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(0);
-        make.right.equalTo(-12);
-        make.left.equalTo(12);
-        make.height.equalTo(1);
+        make.bottom.mas_equalTo(@(0));
+        make.right.mas_equalTo(@(-12));
+        make.left.mas_equalTo(@(12));
+        make.height.mas_equalTo(@(1));
     }];
 }
 

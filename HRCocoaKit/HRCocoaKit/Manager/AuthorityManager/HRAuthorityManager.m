@@ -7,7 +7,6 @@
 //
 
 #import "HRAuthorityManager.h"
-#import "AppDelegate.h"
 #import <UIKit/UIKit.h>
 #import <Photos/Photos.h>
 #import <AVFoundation/AVFoundation.h>
