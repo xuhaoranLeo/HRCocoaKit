@@ -136,7 +136,7 @@
                 <constraint firstItem="BSD-Ha-67s" firstAttribute="top" secondItem="L5g-S9-n5o" secondAttribute="bottom" constant="30" id="kbL-MG-Jnt"/>
                 <constraint firstItem="k5d-vk-j7d" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wHz-dX-lPG"/>
             </constraints>
-            <point key="canvasLocation" x="-6.5" y="-3.5"/>
+            <point key="canvasLocation" x="-78" y="-37"/>
         </view>
     </objects>
     <resources>

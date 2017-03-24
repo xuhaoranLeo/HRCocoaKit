@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		234535401E836DBB00BBC1EF /* HRHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2345353F1E836DBB00BBC1EF /* HRHUDManager.m */; };
+		23C4645F1E84A79F003EBAC6 /* source.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 23C4645E1E84A79F003EBAC6 /* source.bundle */; };
 		23E6B92C1E821134000E6E25 /* CALayer+WaveLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9031E821134000E6E25 /* CALayer+WaveLine.m */; };
 		23E6B92D1E821134000E6E25 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9061E821134000E6E25 /* UIImage+ImageEffects.m */; };
 		23E6B92E1E821134000E6E25 /* UIImageView+BlurEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9081E821134000E6E25 /* UIImageView+BlurEffects.m */; };
@@ -30,12 +31,6 @@
 		23E6B93F1E821134000E6E25 /* UIViewController+CurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B92B1E821134000E6E25 /* UIViewController+CurrentViewController.m */; };
 		23E6B9521E8212D2000E6E25 /* HRQrCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9491E8212D2000E6E25 /* HRQrCodeViewController.m */; };
 		23E6B9531E8212D2000E6E25 /* HRQrCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E6B94A1E8212D2000E6E25 /* HRQrCodeViewController.xib */; };
-		23E6B9541E8212D2000E6E25 /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 23E6B94C1E8212D2000E6E25 /* beep.wav */; };
-		23E6B9551E8212D2000E6E25 /* qrcode_album.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E6B94D1E8212D2000E6E25 /* qrcode_album.png */; };
-		23E6B9561E8212D2000E6E25 /* qrcode_border.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E6B94E1E8212D2000E6E25 /* qrcode_border.png */; };
-		23E6B9571E8212D2000E6E25 /* qrcode_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E6B94F1E8212D2000E6E25 /* qrcode_close.png */; };
-		23E6B9581E8212D2000E6E25 /* qrcode_flash.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E6B9501E8212D2000E6E25 /* qrcode_flash.png */; };
-		23E6B9591E8212D2000E6E25 /* qrcode_scan_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E6B9511E8212D2000E6E25 /* qrcode_scan_line.png */; };
 		23E6B9611E821322000E6E25 /* HRCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B95C1E821322000E6E25 /* HRCollectionViewModel.m */; };
 		23E6B9621E821322000E6E25 /* HRTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B95E1E821322000E6E25 /* HRTableViewModel.m */; };
 		23E6B9631E821322000E6E25 /* HRWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9601E821322000E6E25 /* HRWaterflowLayout.m */; };
@@ -68,6 +63,8 @@
 		2345353E1E836DBB00BBC1EF /* HRHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRHUDManager.h; sourceTree = "<group>"; };
 		2345353F1E836DBB00BBC1EF /* HRHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRHUDManager.m; sourceTree = "<group>"; };
 		234535421E836E3000BBC1EF /* NetworkingConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingConfiguration.h; sourceTree = "<group>"; };
+		23C4645D1E84A72A003EBAC6 /* HRCocoaKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRCocoaKit.h; sourceTree = "<group>"; };
+		23C4645E1E84A79F003EBAC6 /* source.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = source.bundle; sourceTree = "<group>"; };
 		23E6B9021E821134000E6E25 /* CALayer+WaveLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+WaveLine.h"; sourceTree = "<group>"; };
 		23E6B9031E821134000E6E25 /* CALayer+WaveLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+WaveLine.m"; sourceTree = "<group>"; };
 		23E6B9051E821134000E6E25 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -113,12 +110,6 @@
 		23E6B9481E8212D2000E6E25 /* HRQrCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRQrCodeViewController.h; sourceTree = "<group>"; };
 		23E6B9491E8212D2000E6E25 /* HRQrCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRQrCodeViewController.m; sourceTree = "<group>"; };
 		23E6B94A1E8212D2000E6E25 /* HRQrCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRQrCodeViewController.xib; sourceTree = "<group>"; };
-		23E6B94C1E8212D2000E6E25 /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beep.wav; sourceTree = "<group>"; };
-		23E6B94D1E8212D2000E6E25 /* qrcode_album.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode_album.png; sourceTree = "<group>"; };
-		23E6B94E1E8212D2000E6E25 /* qrcode_border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode_border.png; sourceTree = "<group>"; };
-		23E6B94F1E8212D2000E6E25 /* qrcode_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode_close.png; sourceTree = "<group>"; };
-		23E6B9501E8212D2000E6E25 /* qrcode_flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode_flash.png; sourceTree = "<group>"; };
-		23E6B9511E8212D2000E6E25 /* qrcode_scan_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode_scan_line.png; sourceTree = "<group>"; };
 		23E6B95B1E821322000E6E25 /* HRCollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRCollectionViewModel.h; sourceTree = "<group>"; };
 		23E6B95C1E821322000E6E25 /* HRCollectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRCollectionViewModel.m; sourceTree = "<group>"; };
 		23E6B95D1E821322000E6E25 /* HRTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRTableViewModel.h; sourceTree = "<group>"; };
@@ -194,6 +185,7 @@
 		23E6B8FF1E820B9E000E6E25 /* HRCocoaKit */ = {
 			isa = PBXGroup;
 			children = (
+				23C4645D1E84A72A003EBAC6 /* HRCocoaKit.h */,
 				23E6B9461E8212C6000E6E25 /* Manager */,
 				23E6B9401E821198000E6E25 /* Common */,
 				23E6B9011E821134000E6E25 /* Category */,
@@ -310,25 +302,12 @@
 		23E6B9471E8212D2000E6E25 /* HRQrCodeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				23C4645E1E84A79F003EBAC6 /* source.bundle */,
 				23E6B9481E8212D2000E6E25 /* HRQrCodeViewController.h */,
 				23E6B9491E8212D2000E6E25 /* HRQrCodeViewController.m */,
 				23E6B94A1E8212D2000E6E25 /* HRQrCodeViewController.xib */,
-				23E6B94B1E8212D2000E6E25 /* source */,
 			);
 			path = HRQrCodeViewController;
-			sourceTree = "<group>";
-		};
-		23E6B94B1E8212D2000E6E25 /* source */ = {
-			isa = PBXGroup;
-			children = (
-				23E6B94C1E8212D2000E6E25 /* beep.wav */,
-				23E6B94D1E8212D2000E6E25 /* qrcode_album.png */,
-				23E6B94E1E8212D2000E6E25 /* qrcode_border.png */,
-				23E6B94F1E8212D2000E6E25 /* qrcode_close.png */,
-				23E6B9501E8212D2000E6E25 /* qrcode_flash.png */,
-				23E6B9511E8212D2000E6E25 /* qrcode_scan_line.png */,
-			);
-			path = source;
 			sourceTree = "<group>";
 		};
 		23E6B95A1E821322000E6E25 /* HRViewModel */ = {
@@ -531,14 +510,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23E6B9591E8212D2000E6E25 /* qrcode_scan_line.png in Resources */,
-				23E6B9581E8212D2000E6E25 /* qrcode_flash.png in Resources */,
 				23E6B9821E82257A000E6E25 /* StorageViewController.xib in Resources */,
-				23E6B9541E8212D2000E6E25 /* beep.wav in Resources */,
-				23E6B9551E8212D2000E6E25 /* qrcode_album.png in Resources */,
-				23E6B9561E8212D2000E6E25 /* qrcode_border.png in Resources */,
 				23E6B9531E8212D2000E6E25 /* HRQrCodeViewController.xib in Resources */,
-				23E6B9571E8212D2000E6E25 /* qrcode_close.png in Resources */,
+				23C4645F1E84A79F003EBAC6 /* source.bundle in Resources */,
 				23F02AF71E810F0A007618D9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
