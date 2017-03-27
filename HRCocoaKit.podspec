@@ -54,8 +54,8 @@ Pod::Spec.new do |s|
   s.subspec 'HRPopupMenuView' do |ss|
     ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/HRPopupMenuView/*.{h,m}'
     ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/HRPopupMenuView/*.h'
-    ss.dependency 'HRCocoaKit/HRCocoaKit/Category
-    ss.dependency 'HRCocoaKit/HRCocoaKit/Common
+    ss.dependency 'HRCocoaKit/Category'
+    ss.dependency 'HRCocoaKit/Common'
   end
 
   s.subspec 'SecurityManager' do |ss|
@@ -66,13 +66,13 @@ Pod::Spec.new do |s|
   s.subspec 'AuthorityManager' do |ss|
     ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/AuthorityManager/*.{h,m}'
     ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/AuthorityManager/*.h'
-    ss.dependency 'HRCocoaKit/HRCocoaKit/Category
+    ss.dependency 'HRCocoaKit/Category'
   end
   
   s.subspec 'Networking' do |ss|
     ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/Networking/*.{h,m}'
     ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/Networking/*.h'
-    ss.dependency 'HRCocoaKit/HRCocoaKit/HUDManager
+    ss.dependency 'HRCocoaKit/HUDManager'
   end
 
   s.dependency "AFNetworking", "~> 3.0"

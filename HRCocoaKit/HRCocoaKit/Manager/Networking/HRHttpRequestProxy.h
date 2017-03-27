@@ -6,7 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
+
+@protocol AFMultipartFormData;
 
 typedef void(^RequestFinished)(NSURLSessionTask * task, id responseObject);
 typedef void(^RequestFailed)(NSURLSessionTask * task, id error);

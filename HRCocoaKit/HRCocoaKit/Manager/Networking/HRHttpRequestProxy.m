@@ -7,6 +7,7 @@
 
 #import "HRHttpRequestProxy.h"
 #import "HRRequestManager.h"
+#import "AFNetworking.h"
 
 static CGFloat const kTimeoutInterval = 10;
 
