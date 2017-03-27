@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "HRCocoaKit"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.license      = 'MIT'
   s.summary      = "An Objective-C library for FiberhomeCloud by Xu Haoran"
   s.homepage     = "https://github.com/xuhaoranLeo/HRCocoaKit"
@@ -54,6 +54,8 @@ Pod::Spec.new do |s|
   s.subspec 'HRPopupMenuView' do |ss|
     ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/HRPopupMenuView/*.{h,m}'
     ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/HRPopupMenuView/*.h'
+    ss.dependency 'HRCocoaKit/HRCocoaKit/Category
+    ss.dependency 'HRCocoaKit/HRCocoaKit/Common
   end
 
   s.subspec 'SecurityManager' do |ss|
@@ -64,11 +66,13 @@ Pod::Spec.new do |s|
   s.subspec 'AuthorityManager' do |ss|
     ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/AuthorityManager/*.{h,m}'
     ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/AuthorityManager/*.h'
+    ss.dependency 'HRCocoaKit/HRCocoaKit/Category
   end
   
   s.subspec 'Networking' do |ss|
     ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/Networking/*.{h,m}'
     ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/Networking/*.h'
+    ss.dependency 'HRCocoaKit/HRCocoaKit/HUDManager
   end
 
   s.dependency "AFNetworking", "~> 3.0"

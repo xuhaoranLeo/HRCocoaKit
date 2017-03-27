@@ -8,11 +8,11 @@
 
 #import "HRAuthorityManager.h"
 #import <UIKit/UIKit.h>
+#import "UIViewController+CurrentViewController.h"
 #import <Photos/Photos.h>
 #import <AVFoundation/AVFoundation.h>
 #import <AddressBook/AddressBook.h>
 #import <EventKit/EventKit.h>
-#import "UIViewController+CurrentViewController.h"
 #import <ContactsUI/ContactsUI.h>
 
 #ifdef HRAuthorityUseHealthKit

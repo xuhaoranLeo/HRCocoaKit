@@ -38,7 +38,4 @@
 #import "UITextField+ValidChar.h"
 #import "UIViewController+CurrentViewController.h"
 
-#define MAS_SHORTHAND
-#define MAS_SHORTHAND_GLOBALS
-#import "Masonry.h"
 #endif

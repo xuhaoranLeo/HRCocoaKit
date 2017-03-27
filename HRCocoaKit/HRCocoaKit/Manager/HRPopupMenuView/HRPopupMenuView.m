@@ -9,7 +9,8 @@
 #import "HRPopupMenuView.h"
 #import "HRPopupMenuCell.h"
 #import "HRPopupMenuManager.h"
-#import "HRCocoaKit.h"
+#import "UIView+CustomLayout.h"
+#import "CommonDefine.h"
 
 static CGFloat const kTriangleHeight = 10.f;
 static CGFloat const kMargin = 10.f;

@@ -7,7 +7,9 @@
 //
 
 #import "HRPopupMenuCell.h"
-#import "HRCocoaKit.h"
+#import "Masonry.h"
+#import "UIView+CustomMethod.h"
+#import "CommonDefine.h"
 
 @interface  HRPopupMenuCell ()
 @property (nonatomic, strong) UILabel *titleLabel;
@@ -37,7 +39,7 @@
         }];
         self.iconImageView.image = [UIImage imageNamed:imageName];
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.iconImageView.right).offset(@(5));
+            make.left.mas_equalTo(self.iconImageView.mas_right).offset(5);
             make.centerY.mas_equalTo(@(0));
             make.width.mas_greaterThanOrEqualTo(@(30));
             make.height.mas_equalTo(@(20));
