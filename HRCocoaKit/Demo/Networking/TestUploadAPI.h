@@ -8,6 +8,8 @@
 
 #import "HRCocoaKitDemoRequest.h"
 
+@class UIImage;
+
 @interface TestUploadAPI : HRCocoaKitDemoRequest
 - (instancetype)initWithImage:(UIImage *)image;
 @end

@@ -8,7 +8,8 @@
 //  缓存时间为0或者负数时不进行数据请求的本地存储，否则根据具体设置值进行缓存。
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
+
+@protocol AFMultipartFormData;
 
 typedef NS_ENUM(NSInteger , HRRequestMethod) {
     HRRequestMethodGet = 0,

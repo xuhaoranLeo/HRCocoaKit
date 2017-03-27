@@ -7,6 +7,7 @@
 //
 
 #import "TestUploadAPI.h"
+#import "AFURLRequestSerialization.h"
 
 @implementation TestUploadAPI
 {
