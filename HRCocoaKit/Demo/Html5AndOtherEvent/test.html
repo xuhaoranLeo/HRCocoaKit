@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Objc and JavaScript</title>
+        <style type="text/css">
+            * {
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        
+        <div style="margin-top: 100px">
+            <h1>Test how to use objective-c call js</h1><br/>
+            <div><input type="button" value="verify login action" onclick="verifyLogin()"></div>
+            <br/>
+            <div><input type="button" value="call action" onclick="call()"></div><br/>
+        </div>
+        
+        <script type="text/javascript">
+            
+            function verifyLogin(tel) {
+                if (tel!=undefined){
+                    alert('OC端：'+tel);
+                }
+                else {
+                    window.webkit.messageHandlers.GetTelephoneAction.postMessage('verifyLogin');
+                }
+            }
+            function call() {
+                alert('查看调试台');
+                window.webkit.messageHandlers.CallAction.postMessage('17712851885');
+            }
+        </script>
+    </body>
+</html>

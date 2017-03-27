@@ -15,6 +15,7 @@
 #import "NetworkingViewController.h"
 #import "PopupMenuViewController.h"
 #import "SecurityLoginViewController.h"
+#import "HtmlEventViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -86,6 +87,11 @@
             [self showViewController:svc sender:nil];
         }
             break;
+        case 7: {
+            HtmlEventViewController *svc = [HtmlEventViewController new];
+            [self showViewController:svc sender:nil];
+        }
+            break;
         default:
             break;
     }
@@ -112,7 +118,8 @@
                       @"waterflow模型-HRWaterflowLayout",
                       @"网络请求",
                       @"下拉弹窗",
-                      @"本地记录密码获取deviceid"];
+                      @"本地记录密码获取deviceid",
+                      @"Html事件和其他事件"];
     }
     return _dataList;
 }
