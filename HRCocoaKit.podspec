@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "HRCocoaKit"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.license      = 'MIT'
   s.summary      = "An Objective-C library for FiberhomeCloud by Xu Haoran"
   s.homepage     = "https://github.com/xuhaoranLeo/HRCocoaKit"
@@ -73,6 +73,14 @@ Pod::Spec.new do |s|
     ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/Networking/*.{h,m}'
     ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/Networking/*.h'
     ss.dependency 'HRCocoaKit/HUDManager'
+    ss.dependency 'HRCocoaKit/Common'
+  end
+
+  s.subspec 'WKWebViewController' do |ss|
+    ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/WKWebViewController/*.{h,m}'
+    ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/WKWebViewController/*.h'
+    ss.dependency 'HRCocoaKit/HUDManager'
+    ss.dependency 'HRCocoaKit/Common'
   end
 
   s.dependency "AFNetworking", "~> 3.0"
