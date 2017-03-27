@@ -6,7 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HRRequestManager.h"
+#import "HRHttpRequestProxy.h"
+
+@class HRRequestManager;
 
 typedef void(^HRRequestResult)(NSDictionary *responseObject, NSError *error);
 

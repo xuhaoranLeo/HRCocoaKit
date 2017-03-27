@@ -6,9 +6,7 @@
 //
 
 #import "HRRequestManager.h"
-#import "HRHttpRequestGenerator.h"
 #import "HRHUDManager.h"
-#import "AFNetworking.h"
 
 @interface HRRequestManager ()
 @property (nonatomic, strong) NSURLSessionDataTask *task;

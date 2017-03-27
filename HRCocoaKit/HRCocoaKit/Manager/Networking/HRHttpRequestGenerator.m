@@ -6,8 +6,8 @@
 //
 
 #import "HRHttpRequestGenerator.h"
-#import "HRHttpRequestProxy.h"
 #import "HRRequestCacheManager.h"
+#import "HRRequestManager.h"
 
 @implementation HRHttpRequestGenerator
 

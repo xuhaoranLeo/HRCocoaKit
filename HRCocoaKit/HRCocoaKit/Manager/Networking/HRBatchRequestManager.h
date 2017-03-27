@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HRRequestManager.h"
+
+@class HRRequestManager;
 
 typedef void(^RequestArray)(NSArray *requestArray);
 typedef void(^ErrorManager)(NSError *error, HRRequestManager *manager);
