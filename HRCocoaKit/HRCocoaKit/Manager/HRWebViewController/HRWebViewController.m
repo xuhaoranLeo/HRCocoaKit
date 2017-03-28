@@ -46,7 +46,7 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     if (self.configurationBlock) {
-        self.configurationBlock();
+        self.configurationBlock(self);
     }
     if (self.configuration && [self.configuration respondsToSelector:@selector(webViewControllerDidLoad:)]) {
         [self.configuration webViewControllerDidLoad:self];
@@ -79,7 +79,7 @@
 }
 
 #pragma mark - public init method
-- (instancetype)initWithConfiguration:(void (^)())configuration {
+- (instancetype)initWithConfiguration:(void (^)(HRWebViewController *))configuration {
     self = [super init];
     if (self) {
         self.configurationBlock = configuration;
@@ -149,8 +149,8 @@
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    if (self.configuration && [self.configuration respondsToSelector:@selector(webViewDidFinish:)]) {
-        [self.configuration webViewDidFinish:self];
+    if (self.configuration && [self.configuration respondsToSelector:@selector(webViewDidFinish:message:)]) {
+        [self.configuration webViewDidFinish:self message:self.message];
     }
 }
 

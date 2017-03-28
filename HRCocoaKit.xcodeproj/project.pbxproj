@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23366B3E1E8A56D2001CB8DD /* HRWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23366B3D1E8A56D2001CB8DD /* HRWebViewController.m */; };
 		234535401E836DBB00BBC1EF /* HRHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2345353F1E836DBB00BBC1EF /* HRHUDManager.m */; };
 		2362D5D61E84F0E80078C3EC /* HRBatchRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5CB1E84F0E80078C3EC /* HRBatchRequestManager.m */; };
 		2362D5D71E84F0E80078C3EC /* HRHttpRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5CD1E84F0E80078C3EC /* HRHttpRequestGenerator.m */; };
@@ -30,7 +31,6 @@
 		2362D6171E8519FA0078C3EC /* PopupMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2362D6151E8519FA0078C3EC /* PopupMenuViewController.xib */; };
 		2362D61E1E851D5E0078C3EC /* SecurityLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D61C1E851D5E0078C3EC /* SecurityLoginViewController.m */; };
 		2362D61F1E851D5E0078C3EC /* SecurityLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2362D61D1E851D5E0078C3EC /* SecurityLoginViewController.xib */; };
-		2362D6261E88E5FA0078C3EC /* HRWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D6241E88E5FA0078C3EC /* HRWebViewController.m */; };
 		2362D6341E88F1800078C3EC /* HREventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D6311E88F1800078C3EC /* HREventManager.m */; };
 		2362D6351E88F1800078C3EC /* HRWebViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D6331E88F1800078C3EC /* HRWebViewManager.m */; };
 		2362D6381E88F18E0078C3EC /* HtmlEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D6371E88F18E0078C3EC /* HtmlEventViewController.m */; };
@@ -88,6 +88,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23366B3C1E8A56D2001CB8DD /* HRWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRWebViewController.h; sourceTree = "<group>"; };
+		23366B3D1E8A56D2001CB8DD /* HRWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRWebViewController.m; sourceTree = "<group>"; };
 		2345353E1E836DBB00BBC1EF /* HRHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRHUDManager.h; sourceTree = "<group>"; };
 		2345353F1E836DBB00BBC1EF /* HRHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRHUDManager.m; sourceTree = "<group>"; };
 		234535421E836E3000BBC1EF /* NetworkingConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingConfiguration.h; sourceTree = "<group>"; };
@@ -133,8 +135,6 @@
 		2362D61B1E851D5E0078C3EC /* SecurityLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityLoginViewController.h; sourceTree = "<group>"; };
 		2362D61C1E851D5E0078C3EC /* SecurityLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityLoginViewController.m; sourceTree = "<group>"; };
 		2362D61D1E851D5E0078C3EC /* SecurityLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecurityLoginViewController.xib; sourceTree = "<group>"; };
-		2362D6231E88E5FA0078C3EC /* HRWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRWebViewController.h; sourceTree = "<group>"; };
-		2362D6241E88E5FA0078C3EC /* HRWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRWebViewController.m; sourceTree = "<group>"; };
 		2362D6301E88F1800078C3EC /* HREventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HREventManager.h; sourceTree = "<group>"; };
 		2362D6311E88F1800078C3EC /* HREventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HREventManager.m; sourceTree = "<group>"; };
 		2362D6321E88F1800078C3EC /* HRWebViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRWebViewManager.h; sourceTree = "<group>"; };
@@ -246,6 +246,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23366B3B1E8A56D2001CB8DD /* HRWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				23366B3C1E8A56D2001CB8DD /* HRWebViewController.h */,
+				23366B3D1E8A56D2001CB8DD /* HRWebViewController.m */,
+			);
+			path = HRWebViewController;
+			sourceTree = "<group>";
+		};
 		2345353D1E836DBB00BBC1EF /* HUDManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,15 +362,6 @@
 				2362D61D1E851D5E0078C3EC /* SecurityLoginViewController.xib */,
 			);
 			path = SecurityLogin;
-			sourceTree = "<group>";
-		};
-		2362D6201E88E5FA0078C3EC /* WKWebViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2362D6231E88E5FA0078C3EC /* HRWebViewController.h */,
-				2362D6241E88E5FA0078C3EC /* HRWebViewController.m */,
-			);
-			path = WKWebViewController;
 			sourceTree = "<group>";
 		};
 		2362D62E1E88F1780078C3EC /* Html5AndOtherEvent */ = {
@@ -498,7 +498,7 @@
 		23E6B9461E8212C6000E6E25 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				2362D6201E88E5FA0078C3EC /* WKWebViewController */,
+				23366B3B1E8A56D2001CB8DD /* HRWebViewController */,
 				23E6B9471E8212D2000E6E25 /* HRQrCodeViewController */,
 				23E6B95A1E821322000E6E25 /* HRViewModel */,
 				23E6B9641E82132E000E6E25 /* RSA */,
@@ -804,10 +804,10 @@
 				2362D5D91E84F0E80078C3EC /* HRRequestCacheManager.m in Sources */,
 				23E6B92D1E821134000E6E25 /* UIImage+ImageEffects.m in Sources */,
 				23E6B9521E8212D2000E6E25 /* HRQrCodeViewController.m in Sources */,
+				23366B3E1E8A56D2001CB8DD /* HRWebViewController.m in Sources */,
 				2362D6351E88F1800078C3EC /* HRWebViewManager.m in Sources */,
 				23E6B9771E822424000E6E25 /* CollectionViewController.m in Sources */,
 				2362D5F81E85043B0078C3EC /* NetworkingViewController.m in Sources */,
-				2362D6261E88E5FA0078C3EC /* HRWebViewController.m in Sources */,
 				23E6B9311E821134000E6E25 /* NSString+CustomFormat.m in Sources */,
 				23F02AEF1E810F0A007618D9 /* AppDelegate.m in Sources */,
 				23E6B93F1E821134000E6E25 /* UIViewController+CurrentViewController.m in Sources */,
@@ -978,6 +978,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5YEYTU2J43;
 				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					HRAuthorityUseHealthKit,
+				);
 				INFOPLIST_FILE = HRCocoaKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -996,6 +1001,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5YEYTU2J43;
 				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					HRAuthorityUseHealthKit,
+				);
 				INFOPLIST_FILE = HRCocoaKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

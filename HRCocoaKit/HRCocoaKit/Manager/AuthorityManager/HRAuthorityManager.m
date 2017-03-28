@@ -15,19 +15,12 @@
 #import <EventKit/EventKit.h>
 #import <ContactsUI/ContactsUI.h>
 
-#ifdef HRAuthorityUseHealthKit
-#import <HealthKit/HealthKit.h>
-#endif
-
 @interface HRAuthorityManager () <CLLocationManagerDelegate>
 @property (nonatomic, strong) UIAlertController *alert;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) NSString *locationTip;
 @property (nonatomic, copy) HRLocationStatusChanged locationSettingChanged;
 @property (nonatomic, copy) HRCurrentCityInfo currentCityInfo;
-#ifdef HRAuthorityUseHealthKit
-@property (nonatomic, strong) HKHealthStore *healthStore;
-#endif
 @end
 
 @implementation HRAuthorityManager
@@ -250,107 +243,6 @@
         }
     }];
 }
-
-#ifdef HRAuthorityUseHealthKit
-#pragma mark - 健康数据
-- (void)getHealthDataAuthority:(HRAuthorityResult)result failureTip:(NSString *)tip {
-    if (![HKHealthStore isHealthDataAvailable]) {
-        [self showMsg:@"该设备不支持健康功能"];
-        return;
-    }
-    self.healthStore = [[HKHealthStore alloc] init];
-    // update 权限
-    /*
-     HKQuantityType *heightType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeight]; // 身高
-     HKQuantityType *weightType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBodyMass]; // 体重
-     HKQuantityType *temperatureType = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierBodyTemperature]; // 提问
-     HKQuantityType *activeEnergyType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierActiveEnergyBurned]; // 脂肪消耗
-     NSSet *writeDataTypes = [NSSet setWithObjects:heightType, temperatureType, weightType,activeEnergyType,nil];
-     */
-    // read 权限
-    /*
-     HKQuantityType *heightType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeight]; // 身高
-     HKQuantityType *weightType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBodyMass]; // 体重
-     HKQuantityType *temperatureType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBodyTemperature]; // 提问
-     HKCharacteristicType *birthdayType = [HKObjectType characteristicTypeForIdentifier:HKCharacteristicTypeIdentifierDateOfBirth]; // 生日
-     HKCharacteristicType *sexType = [HKObjectType characteristicTypeForIdentifier:HKCharacteristicTypeIdentifierBiologicalSex]; // 性别
-     HKQuantityType *activeEnergyType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierActiveEnergyBurned]; // 能耗
-     */
-    HKQuantityType *stepCountType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount]; // 步数
-    HKQuantityType *distance = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning]; // 距离
-    NSSet *readDataTypes = [NSSet setWithObjects:stepCountType, distance,nil];
-    __weak typeof(self) weakSelf = self;
-    [self.healthStore requestAuthorizationToShareTypes:nil readTypes:readDataTypes completion:^(BOOL success, NSError *error) {
-        if (result == nil) {
-            return;
-        }
-        if (success) {
-            result(HRAuthorityStatusAuthorized);
-        } else {
-            [weakSelf showMsg:tip];
-        }
-    }];
-}
-
-#pragma mark 获取今日步数
-- (void)getStepCountInToday:(void (^)(double, NSError *))result {
-    HKQuantityType *stepType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount];
-    NSSortDescriptor *timeSortDescriptor = [[NSSortDescriptor alloc] initWithKey:HKSampleSortIdentifierEndDate ascending:NO];
-    HKSampleQuery *query = [[HKSampleQuery alloc] initWithSampleType:stepType predicate:[HRAuthorityManager predicateForSamplesToday] limit:HKObjectQueryNoLimit sortDescriptors:@[timeSortDescriptor] resultsHandler:^(HKSampleQuery *query, NSArray *results, NSError *error) {
-        if (result == nil) {
-            return;
-        }
-        if (error) {
-            result(0, error);
-        } else {
-            NSInteger totleSteps = 0;
-            for(HKQuantitySample *quantitySample in results) {
-                HKQuantity *quantity = quantitySample.quantity;
-                HKUnit *heightUnit = [HKUnit countUnit];
-                double usersHeight = [quantity doubleValueForUnit:heightUnit];
-                totleSteps += usersHeight;
-            }
-            result(totleSteps, error);
-        }
-    }];
-    [self.healthStore executeQuery:query];
-}
-#pragma mark 获取今日公里数
-- (void)getDistanceInToday:(void (^)(double, NSError *))result {
-    HKQuantityType *distanceType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning];
-    NSSortDescriptor *timeSortDescriptor = [[NSSortDescriptor alloc] initWithKey:HKSampleSortIdentifierEndDate ascending:NO];
-    HKSampleQuery *query = [[HKSampleQuery alloc] initWithSampleType:distanceType predicate:[HRAuthorityManager predicateForSamplesToday] limit:HKObjectQueryNoLimit sortDescriptors:@[timeSortDescriptor] resultsHandler:^(HKSampleQuery * _Nonnull query, NSArray<__kindof HKSample *> * _Nullable results, NSError * _Nullable error) {
-        if(error) {
-            result(0,error);
-        } else {
-            double distance = 0;
-            for(HKQuantitySample *quantitySample in results)
-            {
-                HKQuantity *quantity = quantitySample.quantity;
-                HKUnit *distanceUnit = [HKUnit meterUnitWithMetricPrefix:HKMetricPrefixKilo];
-                double kilo = [quantity doubleValueForUnit:distanceUnit];
-                distance += kilo;
-            }
-            result(distance, error);
-        }
-    }];
-    [self.healthStore executeQuery:query];
-}
-// 获取今日的断言
-+ (NSPredicate *)predicateForSamplesToday {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDate *now = [NSDate date];
-    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:now];
-    [components setHour:0];
-    [components setMinute:0];
-    [components setSecond: 0];
-    
-    NSDate *startDate = [calendar dateFromComponents:components];
-    NSDate *endDate = [calendar dateByAddingUnit:NSCalendarUnitDay value:1 toDate:startDate options:0];
-    NSPredicate *predicate = [HKQuery predicateForSamplesWithStartDate:startDate endDate:endDate options:HKQueryOptionNone];
-    return predicate;
-}
-#endif
 
 #pragma mark - 推送通知
 - (void)getNotificationAuthority {

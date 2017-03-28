@@ -17,7 +17,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-
+        
     }
     return self;
 }
@@ -88,7 +88,7 @@
 }
 
 - (BOOL)useHTTPs {
-    return NO;
+    return _useHTTPs;
 }
 
 - (float)cacheValidTime {
@@ -96,11 +96,11 @@
 }
 
 - (BOOL)banCache {
-    return NO;
+    return _banCache;
 }
 
 - (BOOL)banLoadingHUD {
-    return NO;
+    return _banLoadingHUD;
 }
 
 - (NSDictionary *)responseDic {

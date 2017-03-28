@@ -11,5 +11,5 @@
 
 @interface HRWebViewManager : NSObject <HRWebViewJavaScriptDelegate, HRWebViewConfigurationDelegate>
 + (instancetype)sharedManager;
-@property (nonatomic, strong) HRWebViewController *webView;
+@property (nonatomic, weak) HRWebViewController *webView;
 @end

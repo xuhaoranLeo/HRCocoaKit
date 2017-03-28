@@ -15,7 +15,7 @@
 - (void)webViewControllerDidLoad:(HRWebViewController *)webViewController;
 - (void)webViewControllerWillAppear:(HRWebViewController *)webViewController;
 - (void)webViewControllerWillDisappear:(HRWebViewController *)webViewController;
-- (void)webViewDidFinish:(HRWebViewController *)webViewController;
+- (void)webViewDidFinish:(HRWebViewController *)webViewController message:(WKScriptMessage *)message;
 - (void)webViewPopWhenCanGoBack:(HRWebViewController *)webViewController;
 - (NSString *)configCookie;
 @end
@@ -31,7 +31,7 @@
 @property (nonatomic, weak) id <HRWebViewJavaScriptDelegate> javascript;
 @property (nonatomic, weak) id <HRWebViewConfigurationDelegate> configuration;
 
-- (instancetype)initWithConfiguration:(void(^)())configuration;
+- (instancetype)initWithConfiguration:(void(^)(HRWebViewController *))configuration;
 - (void)startWithRequestUrlString:(NSString *)urlStr;
 - (void)startWithRequestUrl:(NSURL *)url;
 - (void)startWithHtmlString:(NSString *)htmlStr;
