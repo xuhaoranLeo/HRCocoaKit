@@ -49,5 +49,12 @@
     return resultImage;
 }
 
-
+- (UIImage *)combineWithTopImage:(UIImage *)image resultImageSize:(CGSize)size topImageLocation:(UIEdgeInsets)insets {
+    [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    CGRect frame = CGRectMake(insets.left, insets.top, size.width-insets.left-insets.right, size.height-insets.top-insets.bottom);
+    [image drawInRect:frame];
+    UIImage *resultImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return resultImage;
+}
 @end
