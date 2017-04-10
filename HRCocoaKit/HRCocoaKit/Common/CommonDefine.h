@@ -23,9 +23,9 @@ fprintf(stderr, "-------\n");                                               \
 #endif
 
 /*
- 图片字符串拼接后转成URL
+ 字符串转成URL
  */
-#define kImageUrl(imageUrlStr) (![NSString isEmpty:imageUrlStr] ? ([NSURL URLWithString:imageUrlStr]) : nil)
+#define kStrToUrl(urlStr) (![NSString isEmpty:urlStr] ? ([NSURL URLWithString:urlStr]) : nil)
 
 #define kMultilineTextSize(text, font, maxSize) [text length] > 0 ? [text boundingRectWithSize:maxSize options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName:font} context:nil].size : CGSizeZero
 

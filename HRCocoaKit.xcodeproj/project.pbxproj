@@ -58,7 +58,6 @@
 		23E6B93E1E821134000E6E25 /* UIView+KeyboardAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9291E821134000E6E25 /* UIView+KeyboardAnimation.m */; };
 		23E6B93F1E821134000E6E25 /* UIViewController+CurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B92B1E821134000E6E25 /* UIViewController+CurrentViewController.m */; };
 		23E6B9521E8212D2000E6E25 /* HRQrCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9491E8212D2000E6E25 /* HRQrCodeViewController.m */; };
-		23E6B9531E8212D2000E6E25 /* HRQrCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E6B94A1E8212D2000E6E25 /* HRQrCodeViewController.xib */; };
 		23E6B9611E821322000E6E25 /* HRCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B95C1E821322000E6E25 /* HRCollectionViewModel.m */; };
 		23E6B9621E821322000E6E25 /* HRTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B95E1E821322000E6E25 /* HRTableViewModel.m */; };
 		23E6B9631E821322000E6E25 /* HRWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9601E821322000E6E25 /* HRWaterflowLayout.m */; };
@@ -189,7 +188,6 @@
 		23E6B9441E8211FE000E6E25 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		23E6B9481E8212D2000E6E25 /* HRQrCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRQrCodeViewController.h; sourceTree = "<group>"; };
 		23E6B9491E8212D2000E6E25 /* HRQrCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRQrCodeViewController.m; sourceTree = "<group>"; };
-		23E6B94A1E8212D2000E6E25 /* HRQrCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRQrCodeViewController.xib; sourceTree = "<group>"; };
 		23E6B95B1E821322000E6E25 /* HRCollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRCollectionViewModel.h; sourceTree = "<group>"; };
 		23E6B95C1E821322000E6E25 /* HRCollectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRCollectionViewModel.m; sourceTree = "<group>"; };
 		23E6B95D1E821322000E6E25 /* HRTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRTableViewModel.h; sourceTree = "<group>"; };
@@ -518,7 +516,6 @@
 				2395C0CF1E84C7B4007BF7B4 /* HRQrCodeViewController.bundle */,
 				23E6B9481E8212D2000E6E25 /* HRQrCodeViewController.h */,
 				23E6B9491E8212D2000E6E25 /* HRQrCodeViewController.m */,
-				23E6B94A1E8212D2000E6E25 /* HRQrCodeViewController.xib */,
 			);
 			path = HRQrCodeViewController;
 			sourceTree = "<group>";
@@ -734,7 +731,6 @@
 				23E6B9821E82257A000E6E25 /* StorageViewController.xib in Resources */,
 				2362D63A1E88F87A0078C3EC /* test.html in Resources */,
 				2362D61F1E851D5E0078C3EC /* SecurityLoginViewController.xib in Resources */,
-				23E6B9531E8212D2000E6E25 /* HRQrCodeViewController.xib in Resources */,
 				23F02AF71E810F0A007618D9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
