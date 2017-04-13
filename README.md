@@ -1,0 +1,5 @@
+# HRCocoaKit
+
+```ruby
+pod 'HRCocoaKit'
+```
