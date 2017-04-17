@@ -13,5 +13,5 @@
 /**
  扫描结果
  */
-@property (copy, nonatomic) void (^completionBlock)(NSString *result, UIViewController *weakSelf);
+@property (copy, nonatomic) void (^completionBlock)(NSString *result, UIViewController *qrVC);
 @end
