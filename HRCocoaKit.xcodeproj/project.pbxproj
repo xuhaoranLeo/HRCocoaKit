@@ -9,7 +9,15 @@
 /* Begin PBXBuildFile section */
 		23366B3E1E8A56D2001CB8DD /* HRWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23366B3D1E8A56D2001CB8DD /* HRWebViewController.m */; };
 		234535401E836DBB00BBC1EF /* HRHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2345353F1E836DBB00BBC1EF /* HRHUDManager.m */; };
-		23481AE41EA4E301002D2AB8 /* HRQrCodeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 23481AE31EA4E301002D2AB8 /* HRQrCodeViewController.bundle */; };
+		2357EC221EA5AC77004A98DF /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2357EC1B1EA5AC77004A98DF /* beep.wav */; };
+		2357EC231EA5AC77004A98DF /* HRQrCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2357EC1C1EA5AC77004A98DF /* HRQrCodeViewController.xib */; };
+		2357EC241EA5AC77004A98DF /* qrcode_album.png in Resources */ = {isa = PBXBuildFile; fileRef = 2357EC1D1EA5AC77004A98DF /* qrcode_album.png */; };
+		2357EC251EA5AC77004A98DF /* qrcode_border.png in Resources */ = {isa = PBXBuildFile; fileRef = 2357EC1E1EA5AC77004A98DF /* qrcode_border.png */; };
+		2357EC261EA5AC77004A98DF /* qrcode_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 2357EC1F1EA5AC77004A98DF /* qrcode_close.png */; };
+		2357EC271EA5AC77004A98DF /* qrcode_flash.png in Resources */ = {isa = PBXBuildFile; fileRef = 2357EC201EA5AC77004A98DF /* qrcode_flash.png */; };
+		2357EC281EA5AC77004A98DF /* qrcode_scan_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 2357EC211EA5AC77004A98DF /* qrcode_scan_line.png */; };
+		2357EC301EA5ACDD004A98DF /* QrDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2357EC2E1EA5ACDD004A98DF /* QrDemoViewController.m */; };
+		2357EC311EA5ACDD004A98DF /* QrDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2357EC2F1EA5ACDD004A98DF /* QrDemoViewController.xib */; };
 		2362D5D61E84F0E80078C3EC /* HRBatchRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5CB1E84F0E80078C3EC /* HRBatchRequestManager.m */; };
 		2362D5D71E84F0E80078C3EC /* HRHttpRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5CD1E84F0E80078C3EC /* HRHttpRequestGenerator.m */; };
 		2362D5D81E84F0E80078C3EC /* HRHttpRequestProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D5CF1E84F0E80078C3EC /* HRHttpRequestProxy.m */; };
@@ -92,7 +100,16 @@
 		2345353E1E836DBB00BBC1EF /* HRHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRHUDManager.h; sourceTree = "<group>"; };
 		2345353F1E836DBB00BBC1EF /* HRHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRHUDManager.m; sourceTree = "<group>"; };
 		234535421E836E3000BBC1EF /* NetworkingConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingConfiguration.h; sourceTree = "<group>"; };
-		23481AE31EA4E301002D2AB8 /* HRQrCodeViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HRQrCodeViewController.bundle; sourceTree = "<group>"; };
+		2357EC1B1EA5AC77004A98DF /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beep.wav; sourceTree = "<group>"; };
+		2357EC1C1EA5AC77004A98DF /* HRQrCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRQrCodeViewController.xib; sourceTree = "<group>"; };
+		2357EC1D1EA5AC77004A98DF /* qrcode_album.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode_album.png; sourceTree = "<group>"; };
+		2357EC1E1EA5AC77004A98DF /* qrcode_border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode_border.png; sourceTree = "<group>"; };
+		2357EC1F1EA5AC77004A98DF /* qrcode_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode_close.png; sourceTree = "<group>"; };
+		2357EC201EA5AC77004A98DF /* qrcode_flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode_flash.png; sourceTree = "<group>"; };
+		2357EC211EA5AC77004A98DF /* qrcode_scan_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode_scan_line.png; sourceTree = "<group>"; };
+		2357EC2D1EA5ACDD004A98DF /* QrDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QrDemoViewController.h; sourceTree = "<group>"; };
+		2357EC2E1EA5ACDD004A98DF /* QrDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QrDemoViewController.m; sourceTree = "<group>"; };
+		2357EC2F1EA5ACDD004A98DF /* QrDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QrDemoViewController.xib; sourceTree = "<group>"; };
 		2362D5CA1E84F0E80078C3EC /* HRBatchRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRBatchRequestManager.h; sourceTree = "<group>"; };
 		2362D5CB1E84F0E80078C3EC /* HRBatchRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRBatchRequestManager.m; sourceTree = "<group>"; };
 		2362D5CC1E84F0E80078C3EC /* HRHttpRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRHttpRequestGenerator.h; sourceTree = "<group>"; };
@@ -276,6 +293,30 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		2357EC1A1EA5AC77004A98DF /* HRQrCodeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2357EC1B1EA5AC77004A98DF /* beep.wav */,
+				2357EC1C1EA5AC77004A98DF /* HRQrCodeViewController.xib */,
+				2357EC1D1EA5AC77004A98DF /* qrcode_album.png */,
+				2357EC1E1EA5AC77004A98DF /* qrcode_border.png */,
+				2357EC1F1EA5AC77004A98DF /* qrcode_close.png */,
+				2357EC201EA5AC77004A98DF /* qrcode_flash.png */,
+				2357EC211EA5AC77004A98DF /* qrcode_scan_line.png */,
+			);
+			path = HRQrCodeViewController;
+			sourceTree = "<group>";
+		};
+		2357EC291EA5AC98004A98DF /* QrCodeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2357EC2D1EA5ACDD004A98DF /* QrDemoViewController.h */,
+				2357EC2E1EA5ACDD004A98DF /* QrDemoViewController.m */,
+				2357EC2F1EA5ACDD004A98DF /* QrDemoViewController.xib */,
+			);
+			path = QrCodeViewController;
+			sourceTree = "<group>";
+		};
 		2362D5C91E84F0E80078C3EC /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +449,7 @@
 				234535411E836E1200BBC1EF /* Networking */,
 				23E6B9741E822414000E6E25 /* HRViewModelVC */,
 				23E6B96C1E82137D000E6E25 /* StorageProperty */,
+				2357EC291EA5AC98004A98DF /* QrCodeViewController */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -513,7 +555,7 @@
 		23E6B9471E8212D2000E6E25 /* HRQrCodeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				23481AE31EA4E301002D2AB8 /* HRQrCodeViewController.bundle */,
+				2357EC1A1EA5AC77004A98DF /* HRQrCodeViewController */,
 				23E6B9481E8212D2000E6E25 /* HRQrCodeViewController.h */,
 				23E6B9491E8212D2000E6E25 /* HRQrCodeViewController.m */,
 			);
@@ -727,10 +769,17 @@
 			files = (
 				2362D5F91E85043B0078C3EC /* NetworkingViewController.xib in Resources */,
 				2362D6171E8519FA0078C3EC /* PopupMenuViewController.xib in Resources */,
+				2357EC231EA5AC77004A98DF /* HRQrCodeViewController.xib in Resources */,
 				23E6B9821E82257A000E6E25 /* StorageViewController.xib in Resources */,
+				2357EC311EA5ACDD004A98DF /* QrDemoViewController.xib in Resources */,
+				2357EC241EA5AC77004A98DF /* qrcode_album.png in Resources */,
 				2362D63A1E88F87A0078C3EC /* test.html in Resources */,
-				23481AE41EA4E301002D2AB8 /* HRQrCodeViewController.bundle in Resources */,
+				2357EC221EA5AC77004A98DF /* beep.wav in Resources */,
+				2357EC251EA5AC77004A98DF /* qrcode_border.png in Resources */,
 				2362D61F1E851D5E0078C3EC /* SecurityLoginViewController.xib in Resources */,
+				2357EC261EA5AC77004A98DF /* qrcode_close.png in Resources */,
+				2357EC281EA5AC77004A98DF /* qrcode_scan_line.png in Resources */,
+				2357EC271EA5AC77004A98DF /* qrcode_flash.png in Resources */,
 				23F02AF71E810F0A007618D9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -831,6 +880,7 @@
 				2362D5EB1E84FE2B0078C3EC /* TestGETMethodAPI.m in Sources */,
 				2362D60C1E8518E60078C3EC /* HRPopupMenuManager.m in Sources */,
 				23E6B9381E821134000E6E25 /* UITableView+StretchHeaderView.m in Sources */,
+				2357EC301EA5ACDD004A98DF /* QrDemoViewController.m in Sources */,
 				2362D5D61E84F0E80078C3EC /* HRBatchRequestManager.m in Sources */,
 				23E6B9321E821134000E6E25 /* NSString+Empty.m in Sources */,
 				23E6B93A1E821134000E6E25 /* UITextField+ValidChar.m in Sources */,

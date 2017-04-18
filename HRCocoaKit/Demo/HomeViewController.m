@@ -16,6 +16,7 @@
 #import "PopupMenuViewController.h"
 #import "SecurityLoginViewController.h"
 #import "HtmlEventViewController.h"
+#import "QrDemoViewController.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -92,6 +93,11 @@
             [self showViewController:svc sender:nil];
         }
             break;
+        case 8: {
+            QrDemoViewController *svc = [QrDemoViewController new];
+            [self showViewController:svc sender:nil];
+        }
+            break;
         default:
             break;
     }
@@ -119,7 +125,8 @@
                       @"网络请求",
                       @"下拉弹窗",
                       @"本地记录密码获取deviceid",
-                      @"Html事件和其他事件"];
+                      @"Html事件和其他事件",
+                      @"二维码扫描"];
     }
     return _dataList;
 }
