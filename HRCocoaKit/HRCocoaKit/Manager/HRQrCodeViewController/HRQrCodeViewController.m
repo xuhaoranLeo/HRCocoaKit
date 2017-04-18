@@ -8,6 +8,7 @@
 
 #import "HRQrCodeViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "HRAuthorityManager.h"
 
 @interface HRQrCodeViewController () <AVCaptureMetadataOutputObjectsDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scanLineTop;
@@ -25,17 +26,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [UIColor blackColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self startScan];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [self startAnimation];
+    __weak typeof(self) weakSelf = self;
+    [[HRAuthorityManager sharedManager] getCameraAuthority:^(HRAuthorityStatus status) {
+        if (status == HRAuthorityStatusAuthorized) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf startScan];
+                [weakSelf startAnimation];
+            });
+        } else {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"您尚未允许“智慧拐杖”使用相机" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"不开启" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [weakSelf dismissViewControllerAnimated:YES completion:nil];
+            }];
+            UIAlertAction *open = [UIAlertAction actionWithTitle:@"去开启" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                if ([[UIApplication sharedApplication] canOpenURL:url]) {
+                    dispatch_after(0.2, dispatch_get_main_queue(), ^{
+                        [[UIApplication sharedApplication] openURL:url];
+                    });
+                }
+            }];
+            [alert addAction:cancel];
+            [alert addAction:open];
+            [weakSelf presentViewController:alert animated:YES completion:nil];
+        }
+    } failureTip:nil];
+    
 }
 
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate
