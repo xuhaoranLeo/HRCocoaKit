@@ -1,10 +1,11 @@
 
 Pod::Spec.new do |s|
 
+# rvm use system
 # pod trunk push HRCocoaKit.podspec --allow-warnings --verbose --use-libraries
 
   s.name         = "HRCocoaKit"
-  s.version      = "0.0.13"
+  s.version      = "0.0.14"
   s.license      = 'MIT'
   s.summary      = "An Objective-C library for FiberhomeCloud by Xu Haoran"
   s.homepage     = "https://github.com/xuhaoranLeo/HRCocoaKit"
@@ -49,7 +50,6 @@ Pod::Spec.new do |s|
     ss.source_files = 'HRCocoaKit/HRCocoaKit/Manager/HRQrCodeViewController/*.{h,m}'
     ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/HRQrCodeViewController/HRQrCodeViewController.h'
     ss.ios.frameworks = 'AVFoundation'
-    ss.resources = 'HRCocoaKit/HRCocoaKit/Manager/HRQrCodeViewController/HRQrCodeViewController.bundle'
     ss.resource_bundles = {
       'HRQrCodeViewController' => ['HRCocoaKit/HRCocoaKit/Manager/HRQrCodeViewController/HRQrCodeViewController/*.{wav,xib,nib,png}']
     }

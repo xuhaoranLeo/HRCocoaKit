@@ -8,7 +8,6 @@
 
 #import "HRQrCodeViewController.h"
 #import <AVFoundation/AVFoundation.h>
-#import "HRAuthorityManager.h"
 
 @interface HRQrCodeViewController () <AVCaptureMetadataOutputObjectsDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scanLineTop;
@@ -32,8 +31,12 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     __weak typeof(self) weakSelf = self;
-    [[HRAuthorityManager sharedManager] getCameraAuthority:^(HRAuthorityStatus status) {
-        if (status == HRAuthorityStatusAuthorized) {
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        return;
+    }
+    [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+        if (status == AVAuthorizationStatusAuthorized) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [weakSelf startScan];
                 [weakSelf startAnimation];
@@ -55,8 +58,7 @@
             [alert addAction:open];
             [weakSelf presentViewController:alert animated:YES completion:nil];
         }
-    } failureTip:nil];
-    
+    }];
 }
 
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate

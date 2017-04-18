@@ -131,6 +131,7 @@
         HRWebViewController *svc = [[HRWebViewController alloc] initWithConfiguration:self.configurationBlock];
         svc.javascript = self.javascript;
         svc.configuration = self.configuration;
+        [svc startWithRequestUrl:navigationAction.request.URL];
         [self showViewController:svc sender:nil];
         decisionHandler(WKNavigationActionPolicyCancel);
         return;

@@ -69,6 +69,7 @@
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         return;
     }
+    __weak typeof(self) weakSelf = self;
     [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
         if (!result) {
             return;
@@ -90,7 +91,7 @@
                 break;
         }
         if ((authorityStatus == HRAuthorityStatusRestricted || authorityStatus == HRAuthorityStatusDenied) && tip.length) {
-            [self showMsg:tip];
+            [weakSelf showMsg:tip];
         } else {
             result(authorityStatus);
         }
@@ -99,6 +100,7 @@
 }
 #pragma mark - 麦克风
 - (void)getAudioAuthority:(HRAuthorityResult)result failureTip:(NSString *)tip {
+    __weak typeof(self) weakSelf = self;
     [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
         if (!result) {
             return;
@@ -120,7 +122,7 @@
                 break;
         }
         if ((authorityStatus == HRAuthorityStatusRestricted || authorityStatus == HRAuthorityStatusDenied) && tip.length) {
-            [self showMsg:tip];
+            [weakSelf showMsg:tip];
         } else {
             result(authorityStatus);
         }
