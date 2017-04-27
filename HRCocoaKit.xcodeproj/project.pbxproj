@@ -45,6 +45,8 @@
 		2362D6381E88F18E0078C3EC /* HtmlEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2362D6371E88F18E0078C3EC /* HtmlEventViewController.m */; };
 		2362D63A1E88F87A0078C3EC /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 2362D6391E88F87A0078C3EC /* test.html */; };
 		2395C0CE1E84C4F8007BF7B4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2395C0CD1E84C4F8007BF7B4 /* AVFoundation.framework */; };
+		23E39FB01EB1DF7F00E99B7D /* UIViewController+NavigationBackAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E39FAF1EB1DF7F00E99B7D /* UIViewController+NavigationBackAction.m */; };
+		23E39FBB1EB1E2B300E99B7D /* WaterflowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E39FBA1EB1E2B300E99B7D /* WaterflowViewController.m */; };
 		23E6B92C1E821134000E6E25 /* CALayer+WaveLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9031E821134000E6E25 /* CALayer+WaveLine.m */; };
 		23E6B92D1E821134000E6E25 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9061E821134000E6E25 /* UIImage+ImageEffects.m */; };
 		23E6B92E1E821134000E6E25 /* UIImageView+BlurEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9081E821134000E6E25 /* UIImageView+BlurEffects.m */; };
@@ -74,7 +76,6 @@
 		23E6B9731E821512000E6E25 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9721E821512000E6E25 /* HomeViewController.m */; };
 		23E6B9771E822424000E6E25 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9761E822424000E6E25 /* CollectionViewController.m */; };
 		23E6B97A1E822433000E6E25 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B9791E822433000E6E25 /* TableViewController.m */; };
-		23E6B97D1E82243C000E6E25 /* WaterflowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B97C1E82243C000E6E25 /* WaterflowViewController.m */; };
 		23E6B9811E82257A000E6E25 /* StorageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B97F1E82257A000E6E25 /* StorageViewController.m */; };
 		23E6B9821E82257A000E6E25 /* StorageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E6B9801E82257A000E6E25 /* StorageViewController.xib */; };
 		23F02AEC1E810F0A007618D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F02AEB1E810F0A007618D9 /* main.m */; };
@@ -161,6 +162,10 @@
 		2362D6391E88F87A0078C3EC /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		2395C0CD1E84C4F8007BF7B4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		23C4645D1E84A72A003EBAC6 /* HRCocoaKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRCocoaKit.h; sourceTree = "<group>"; };
+		23E39FAE1EB1DF7F00E99B7D /* UIViewController+NavigationBackAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationBackAction.h"; sourceTree = "<group>"; };
+		23E39FAF1EB1DF7F00E99B7D /* UIViewController+NavigationBackAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationBackAction.m"; sourceTree = "<group>"; };
+		23E39FB91EB1E2B300E99B7D /* WaterflowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterflowViewController.h; sourceTree = "<group>"; };
+		23E39FBA1EB1E2B300E99B7D /* WaterflowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterflowViewController.m; sourceTree = "<group>"; };
 		23E6B9021E821134000E6E25 /* CALayer+WaveLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+WaveLine.h"; sourceTree = "<group>"; };
 		23E6B9031E821134000E6E25 /* CALayer+WaveLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+WaveLine.m"; sourceTree = "<group>"; };
 		23E6B9051E821134000E6E25 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -222,8 +227,6 @@
 		23E6B9761E822424000E6E25 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		23E6B9781E822433000E6E25 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		23E6B9791E822433000E6E25 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		23E6B97B1E82243C000E6E25 /* WaterflowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterflowViewController.h; sourceTree = "<group>"; };
-		23E6B97C1E82243C000E6E25 /* WaterflowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterflowViewController.m; sourceTree = "<group>"; };
 		23E6B97E1E82257A000E6E25 /* StorageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageViewController.h; sourceTree = "<group>"; };
 		23E6B97F1E82257A000E6E25 /* StorageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageViewController.m; sourceTree = "<group>"; };
 		23E6B9801E82257A000E6E25 /* StorageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StorageViewController.xib; sourceTree = "<group>"; };
@@ -489,6 +492,8 @@
 				23E6B9291E821134000E6E25 /* UIView+KeyboardAnimation.m */,
 				23E6B92A1E821134000E6E25 /* UIViewController+CurrentViewController.h */,
 				23E6B92B1E821134000E6E25 /* UIViewController+CurrentViewController.m */,
+				23E39FAE1EB1DF7F00E99B7D /* UIViewController+NavigationBackAction.h */,
+				23E39FAF1EB1DF7F00E99B7D /* UIViewController+NavigationBackAction.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -611,8 +616,8 @@
 				23E6B9791E822433000E6E25 /* TableViewController.m */,
 				23E6B9751E822424000E6E25 /* CollectionViewController.h */,
 				23E6B9761E822424000E6E25 /* CollectionViewController.m */,
-				23E6B97B1E82243C000E6E25 /* WaterflowViewController.h */,
-				23E6B97C1E82243C000E6E25 /* WaterflowViewController.m */,
+				23E39FB91EB1E2B300E99B7D /* WaterflowViewController.h */,
+				23E39FBA1EB1E2B300E99B7D /* WaterflowViewController.m */,
 			);
 			path = HRViewModelVC;
 			sourceTree = "<group>";
@@ -865,17 +870,18 @@
 				23E6B92C1E821134000E6E25 /* CALayer+WaveLine.m in Sources */,
 				2362D5DB1E84F0E80078C3EC /* NSDate+TimeStamp.m in Sources */,
 				23E6B9371E821134000E6E25 /* UINavigationBar+CustomColor.m in Sources */,
-				23E6B97D1E82243C000E6E25 /* WaterflowViewController.m in Sources */,
 				23E6B9331E821134000E6E25 /* NSString+Timestamp.m in Sources */,
 				23E6B9341E821134000E6E25 /* NSArray+Safe.m in Sources */,
 				234535401E836DBB00BBC1EF /* HRHUDManager.m in Sources */,
 				2362D60E1E8518E60078C3EC /* HRPopupMenuView.m in Sources */,
+				23E39FB01EB1DF7F00E99B7D /* UIViewController+NavigationBackAction.m in Sources */,
 				23E6B9391E821134000E6E25 /* UITextField+Placeholder.m in Sources */,
 				23E6B9611E821322000E6E25 /* HRCollectionViewModel.m in Sources */,
 				23E6B9351E821134000E6E25 /* NSMutableArray+Safe.m in Sources */,
 				23E6B93B1E821134000E6E25 /* UIView+CornerBorder.m in Sources */,
 				23E6B93D1E821134000E6E25 /* UIView+CustomMethod.m in Sources */,
 				2362D6381E88F18E0078C3EC /* HtmlEventViewController.m in Sources */,
+				23E39FBB1EB1E2B300E99B7D /* WaterflowViewController.m in Sources */,
 				23E6B93E1E821134000E6E25 /* UIView+KeyboardAnimation.m in Sources */,
 				2362D5EB1E84FE2B0078C3EC /* TestGETMethodAPI.m in Sources */,
 				2362D60C1E8518E60078C3EC /* HRPopupMenuManager.m in Sources */,

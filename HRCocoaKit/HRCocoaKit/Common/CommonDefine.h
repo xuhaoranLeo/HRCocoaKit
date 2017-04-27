@@ -25,8 +25,11 @@ fprintf(stderr, "-------\n");                                               \
 /*
  字符串转成URL
  */
-#define kStrToUrl(urlStr) (![NSString isEmpty:urlStr] ? ([NSURL URLWithString:urlStr]) : nil)
+#define kStrToUrl(urlStr) (![NSString isEmpty:urlStr] ? ([NSURL URLWithString:[urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]) : nil)
 
+/*
+ 多行计算
+ */
 #define kMultilineTextSize(text, font, maxSize) [text length] > 0 ? [text boundingRectWithSize:maxSize options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName:font} context:nil].size : CGSizeZero
 
 /*

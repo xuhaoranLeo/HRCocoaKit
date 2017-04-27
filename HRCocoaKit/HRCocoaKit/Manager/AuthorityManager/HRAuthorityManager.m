@@ -263,7 +263,7 @@
         return NO;
     }
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
-    if (!(status == kCLAuthorizationStatusAuthorizedAlways || status == kCLAuthorizationStatusAuthorizedWhenInUse)) {
+    if (!(status == kCLAuthorizationStatusAuthorizedAlways || status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusNotDetermined)) {
         return NO;
     }
     return YES;

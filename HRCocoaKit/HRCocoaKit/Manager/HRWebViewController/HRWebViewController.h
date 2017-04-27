@@ -31,7 +31,6 @@
 @property (nonatomic, weak) id <HRWebViewJavaScriptDelegate> javascript;
 @property (nonatomic, weak) id <HRWebViewConfigurationDelegate> configuration;
 
-- (instancetype)initWithConfiguration:(void(^)(HRWebViewController *))configuration;
 - (void)startWithRequestUrlString:(NSString *)urlStr;
 - (void)startWithRequestUrl:(NSURL *)url;
 - (void)startWithHtmlString:(NSString *)htmlStr;

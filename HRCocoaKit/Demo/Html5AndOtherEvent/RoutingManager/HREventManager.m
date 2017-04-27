@@ -25,7 +25,7 @@
 
 + (void)browseEvent:(HREventModel *)event parent:(UIViewController *)parent {
     HRWebViewManager *manager = [HRWebViewManager sharedManager];
-    HRWebViewController *webView = [[HRWebViewController alloc] initWithConfiguration:nil];
+    HRWebViewController *webView = [[HRWebViewController alloc] init];
     webView.javascript = manager;
     webView.configuration = manager;
     manager.webView = webView;

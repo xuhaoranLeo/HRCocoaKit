@@ -9,6 +9,7 @@
 #import "HRHUDManager.h"
 #import "CommonDefine.h"
 #import "Masonry.h"
+#import "UIViewController+NavigationBackAction.h"
 
 /*
  此处为防止addScriptMessageHandler引起的循环引用，也可以在viewWillDisappear中调用removeScriptMessageHandlerForName移除handler
@@ -35,7 +36,6 @@
 @interface HRWebViewController () <WKScriptMessageHandler, WKUIDelegate, WKNavigationDelegate, UIScrollViewDelegate>
 @property (nonatomic, strong) UIProgressView *progress;
 @property (nonatomic, strong) UILabel *reloadLabel;
-@property (nonatomic, copy) void (^configurationBlock)();
 @property (nonatomic, strong) WKScriptMessage *message;
 @end
 
@@ -45,9 +45,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    if (self.configurationBlock) {
-        self.configurationBlock(self);
-    }
     if (self.configuration && [self.configuration respondsToSelector:@selector(webViewControllerDidLoad:)]) {
         [self.configuration webViewControllerDidLoad:self];
     }
@@ -79,14 +76,6 @@
 }
 
 #pragma mark - public init method
-- (instancetype)initWithConfiguration:(void (^)(HRWebViewController *))configuration {
-    self = [super init];
-    if (self) {
-        self.configurationBlock = configuration;
-    }
-    return self;
-}
-
 - (void)startWithRequestUrlString:(NSString *)urlStr {
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
 }
@@ -128,7 +117,7 @@
     NSLog(@"%@", navigationAction.request.URL);
     if (navigationAction.navigationType == WKNavigationTypeLinkActivated) {
         // 拦截链接
-        HRWebViewController *svc = [[HRWebViewController alloc] initWithConfiguration:self.configurationBlock];
+        HRWebViewController *svc = [[HRWebViewController alloc] init];
         svc.javascript = self.javascript;
         svc.configuration = self.configuration;
         [svc startWithRequestUrl:navigationAction.request.URL];
@@ -205,6 +194,11 @@
     }
 }
 
+- (BOOL)navigationShouldPopAction {
+    [self backAction];
+    return NO;
+}
+
 #pragma mark - private method
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"loading"]) {
@@ -238,7 +232,7 @@
         if (self.javascript && [self.javascript respondsToSelector:@selector(registerJavaScriptMethod:configuration:)]) {
             [self.javascript registerJavaScriptMethod:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] configuration:config];
         }
-
+        
         _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight-64) configuration:config];
         _webView.UIDelegate = self;
         _webView.navigationDelegate = self;
