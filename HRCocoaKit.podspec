@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
 # pod trunk push HRCocoaKit.podspec --allow-warnings --verbose --use-libraries
 
   s.name         = "HRCocoaKit"
-  s.version      = "0.0.16"
+  s.version      = "0.0.17"
   s.license      = 'MIT'
   s.summary      = "An Objective-C library for FiberhomeCloud by Xu Haoran"
   s.homepage     = "https://github.com/xuhaoranLeo/HRCocoaKit"
@@ -85,6 +85,7 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'HRCocoaKit/HRCocoaKit/Manager/HRWebViewController/*.h'
     ss.dependency 'HRCocoaKit/HUDManager'
     ss.dependency 'HRCocoaKit/Common'
+    ss.dependency 'HRCocoaKit/Category'
   end
 
   s.dependency "AFNetworking", "~> 3.0"

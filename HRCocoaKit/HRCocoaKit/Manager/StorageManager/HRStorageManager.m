@@ -72,7 +72,7 @@ static NSString * const FileName = @"LocalStorage";
     [HRStorageManager removeAllCacheExceptStorageType:nil finish:finish];
 }
 
-+ (long long)calculateCacheSize {
++ (long long)calculateCacheSize:(NSArray <NSString *> *)typeArr {
     HRStorageManager *mamager = [HRStorageManager sharedManager];
     NSFileManager *manager = [NSFileManager defaultManager];
     if (![manager fileExistsAtPath:mamager.storagePath]) {
@@ -82,9 +82,11 @@ static NSString * const FileName = @"LocalStorage";
     NSString *fileName;
     long long total = 0;
     while (fileName= [dirEnum nextObject]) {
+        if ([typeArr containsObject:fileName] && typeArr) {
+            break;
+        }
         NSString *path = [mamager.storagePath stringByAppendingPathComponent:fileName];
-        total += [[[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil] fileSize]
-        ;
+        total += [[[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil] fileSize];
     }
     return total;
 }
