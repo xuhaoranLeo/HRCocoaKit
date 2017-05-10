@@ -58,5 +58,5 @@
 
  @return 大小（字节）
  */
-+ (long long)calculateCacheSize;
++ (long long)calculateCacheSize:(NSArray <NSString *> *)typeArr;
 @end

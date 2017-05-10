@@ -57,7 +57,7 @@
 
 #pragma mark - private method
 - (CGFloat)getCacheSize {
-    long long storgeCache = [HRStorageManager calculateCacheSize];
+    long long storgeCache = [HRStorageManager calculateCacheSize:nil];
     // return Byte
     return storgeCache;
 }
