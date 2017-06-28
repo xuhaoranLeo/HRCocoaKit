@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
 # pod trunk push HRCocoaKit.podspec --allow-warnings --verbose --use-libraries
 
   s.name         = "HRCocoaKit"
-  s.version      = "0.0.17"
+  s.version      = "0.0.19"
   s.license      = 'MIT'
   s.summary      = "An Objective-C library for FiberhomeCloud by Xu Haoran"
   s.homepage     = "https://github.com/xuhaoranLeo/HRCocoaKit"

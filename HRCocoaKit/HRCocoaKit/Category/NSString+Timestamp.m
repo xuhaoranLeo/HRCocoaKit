@@ -11,10 +11,11 @@
 @implementation NSString (Timestamp)
 - (NSString *)transformTimestampWithFormatter:(NSString *)formatter {
     NSString *timeStr = self;
-    if (timeStr.length < 10) {
+    if ((timeStr.length < 10 && timeStr.integerValue >= 0) ||
+        (timeStr.length < 11 && timeStr.integerValue < 0)) {
         return @"暂无";
     }
-    timeStr = [timeStr substringToIndex:10];
+    timeStr = timeStr.integerValue > 0 ? [timeStr substringToIndex:10] : [timeStr substringToIndex:11];
     NSDate *detailDate = [NSDate dateWithTimeIntervalSince1970:[timeStr doubleValue]];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:formatter];
@@ -23,10 +24,11 @@
 
 - (NSString *)transformWeekday {
     NSString *timeStr = self;
-    if (timeStr.length < 10) {
+    if ((timeStr.length < 10 && timeStr.integerValue >= 0) ||
+        (timeStr.length < 11 && timeStr.integerValue < 0)) {
         return @"暂无";
     }
-    timeStr = [timeStr substringToIndex:10];
+    timeStr = timeStr.integerValue > 0 ? [timeStr substringToIndex:10] : [timeStr substringToIndex:11];
     NSDate *detailDate = [NSDate dateWithTimeIntervalSince1970:[timeStr doubleValue]];
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *weekdayComponents = [calendar components:NSCalendarUnitWeekday fromDate:detailDate];
@@ -62,10 +64,11 @@
 
 - (NSString *)transformFormattedDateWithFormatter:(NSString *)formatter {
     NSString *timestampStr = self;
-    if (timestampStr.length < 10) {
+    if ((timestampStr.length < 10 && timestampStr.integerValue >= 0) ||
+        (timestampStr.length < 11 && timestampStr.integerValue < 0)) {
         return @"暂无";
     }
-    timestampStr = [timestampStr substringToIndex:10];
+    timestampStr = timestampStr.integerValue > 0 ? [timestampStr substringToIndex:10] : [timestampStr substringToIndex:11];
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:[timestampStr doubleValue]];
     NSDate *nowDate = [NSDate date];
     NSTimeInterval interval = [nowDate timeIntervalSinceDate:date];
