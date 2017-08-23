@@ -67,7 +67,7 @@
                 } failure:^(NSURLSessionTask * _Nonnull task, id  _Nonnull error) {
                     result(nil, error);
                     [generator requestDataPrintWithName:manager.requestName method:@"POST" url:URL params:manager.params header:header response:nil error:error];
-                } header:header useHTTPs:manager.useHTTPs];
+                } header:header useHTTPs:manager.useHTTPs postContentType:manager.postContentType];
             }
         }
             break;

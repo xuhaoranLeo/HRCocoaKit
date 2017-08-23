@@ -33,10 +33,10 @@
             [HRHUDManager dismissAlert];
             if (handle) {
                 weakSelf.responseDic = responseObject;
-                BOOL result = [responseObject[@"code"] integerValue] == 1 ? YES : NO;
+                BOOL result = [[NSString stringWithFormat:@"%@", responseObject[weakSelf.codeStr]] isEqualToString:self.successStr] ? YES : NO;
                 handle(responseObject, result);
                 if (result == NO && !self.banLoadingHUD) {
-                    [HRHUDManager showBriefAlert:responseObject[@"msg"]];
+                    [HRHUDManager showBriefAlert:responseObject[weakSelf.msgStr]];
                 }
             }
         } else {
@@ -63,6 +63,26 @@
     return HRRequestMethodGet;
 }
 
+- (NSString *)codeStr {
+    return @"code";
+}
+
+- (NSString *)msgStr {
+    return @"msg";
+}
+
+- (NSString *)dataStr {
+    return @"data";
+}
+
+- (NSString *)successStr {
+    return @"1";
+}
+
+- (NSString *)failureStr {
+    return @"0";
+}
+
 - (NSString *)requestName {
     return [NSString stringWithFormat:@"%@", NSStringFromClass([self class])];
 }
@@ -81,6 +101,10 @@
 
 - (NSDictionary *)headers {
     return @{};
+}
+
+- (NSString *)postContentType {
+    return @"application/json;charset=utf-8";
 }
 
 - (AFConstructingBlock)constructing {

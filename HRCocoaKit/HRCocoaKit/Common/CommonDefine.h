@@ -67,6 +67,9 @@ blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
 [UIColor colorWithRed:((float)((0xf0eff5 & 0xFF0000) >> 16)) / 255.0 \
 green:((float)((0xf0eff5 & 0xFF00) >> 8)) / 255.0 \
 blue:((float)(0xf0eff5 & 0xFF)) / 255.0 alpha:1.0]
+
+#define kRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
+
 /*
  版本宏
  */

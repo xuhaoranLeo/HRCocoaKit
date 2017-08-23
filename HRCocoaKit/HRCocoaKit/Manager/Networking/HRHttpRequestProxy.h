@@ -23,7 +23,7 @@ typedef void(^RequestFailed)(NSURLSessionTask * task, id error);
  *  @param header  请求头
  */
 + (NSURLSessionDataTask *)callGETRequestWithURL:(NSString *)URL params:(NSDictionary *)params success:(RequestFinished)success failure:(RequestFailed)failure header:(NSDictionary *)header useHTTPs:(BOOL)useHTTPs;
-+ (NSURLSessionDataTask *)callPOSTRequestWithURL:(NSString *)URL params:(NSDictionary *)params success:(RequestFinished)success failure:(RequestFailed)failure header:(NSDictionary *)header useHTTPs:(BOOL)useHTTPs;
++ (NSURLSessionDataTask *)callPOSTRequestWithURL:(NSString *)URL params:(NSDictionary *)params success:(RequestFinished)success failure:(RequestFailed)failure header:(NSDictionary *)header useHTTPs:(BOOL)useHTTPs postContentType:(NSString *)postContentType;
 /**
  *  上传数据方法
  *

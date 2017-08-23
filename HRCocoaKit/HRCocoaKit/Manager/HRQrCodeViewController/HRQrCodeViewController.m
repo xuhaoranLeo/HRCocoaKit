@@ -42,7 +42,7 @@
                 [weakSelf startAnimation];
             });
         } else {
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"您尚未允许“智慧拐杖”使用相机" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"您尚未允许使用相机" message:@"" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"不开启" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 [weakSelf dismissViewControllerAnimated:YES completion:nil];
             }];

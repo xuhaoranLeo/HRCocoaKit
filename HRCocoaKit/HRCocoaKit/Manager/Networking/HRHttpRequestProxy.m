@@ -43,7 +43,7 @@ static CGFloat const kTimeoutInterval = 10;
     }];
 }
 
-+ (NSURLSessionDataTask *)callPOSTRequestWithURL:(NSString *)URL params:(NSDictionary *)params success:(RequestFinished)success failure:(RequestFailed)failure header:(NSDictionary *)header useHTTPs:(BOOL)useHTTPs {
++ (NSURLSessionDataTask *)callPOSTRequestWithURL:(NSString *)URL params:(NSDictionary *)params success:(RequestFinished)success failure:(RequestFailed)failure header:(NSDictionary *)header useHTTPs:(BOOL)useHTTPs postContentType:(NSString *)postContentType {
     HRHttpRequestProxy *proxy = [HRHttpRequestProxy sharedProxy];
     proxy.sessionManager.requestSerializer.timeoutInterval = kTimeoutInterval;
     if (useHTTPs) {
@@ -54,6 +54,7 @@ static CGFloat const kTimeoutInterval = 10;
             [proxy.sessionManager.requestSerializer setValue:(NSString *)obj forHTTPHeaderField:(NSString *)key];
         }];
     }
+    [proxy.sessionManager.requestSerializer setValue:postContentType forHTTPHeaderField:@"Content-Type"];
     return [proxy.sessionManager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
             success(task, responseObject);
@@ -92,10 +93,10 @@ static CGFloat const kTimeoutInterval = 10;
 
 #pragma mark - private method
 - (AFSecurityPolicy *)configSecurityPolicy {
-//    NSString *certFilePath = [[NSBundle mainBundle] pathForResource:@"ca" ofType:@"der"];
-//    NSData *certData = [NSData dataWithContentsOfFile:certFilePath];
-//    NSSet *certSet = [NSSet setWithObject:certData];
-//    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone withPinnedCertificates:certSet];
+    //    NSString *certFilePath = [[NSBundle mainBundle] pathForResource:@"ca" ofType:@"der"];
+    //    NSData *certData = [NSData dataWithContentsOfFile:certFilePath];
+    //    NSSet *certSet = [NSSet setWithObject:certData];
+    //    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone withPinnedCertificates:certSet];
     AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     // 是否允许无效证书，即自建证书。
     securityPolicy.allowInvalidCertificates = YES;
@@ -108,7 +109,7 @@ static CGFloat const kTimeoutInterval = 10;
 - (AFHTTPSessionManager *)sessionManager {
     if (_sessionManager == nil) {
         _sessionManager = [AFHTTPSessionManager manager];
-        _sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
+        _sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
         _sessionManager.requestSerializer.timeoutInterval = kTimeoutInterval;
         _sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
         _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"text/plain", @"application/json", nil];

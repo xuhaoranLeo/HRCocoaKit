@@ -23,6 +23,11 @@ typedef void (^AFConstructingBlock)(id <AFMultipartFormData> formData);
 @interface HRRequestManager : NSObject
 
 #pragma mark - public configuration
+@property (nonatomic, strong) NSString *dataStr;
+@property (nonatomic, strong) NSString *codeStr;
+@property (nonatomic, strong) NSString *msgStr;
+@property (nonatomic, strong) NSString *successStr;
+@property (nonatomic, strong) NSString *failureStr;
 /**
  *  请求方法，默认GET请求
  */
@@ -47,6 +52,10 @@ typedef void (^AFConstructingBlock)(id <AFMultipartFormData> formData);
  *  请求头，有默认值
  */
 @property (nonatomic, strong) NSDictionary *headers;
+/**
+ *  content type
+ */
+@property (nonatomic, strong) NSString *postContentType;
 /**
  *  上传数据的结构
  */
