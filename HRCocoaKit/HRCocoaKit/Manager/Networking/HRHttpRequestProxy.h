@@ -13,6 +13,10 @@ typedef void(^RequestFailed)(NSURLSessionTask * task, id error);
 
 @interface HRHttpRequestProxy : NSObject
 + (instancetype)sharedProxy;
+@property (nonatomic, assign) BOOL useHTTPs;
+@property (nonatomic, strong) NSString *contentType;
+@property (nonatomic, strong) NSDictionary *header;
+@property (nonatomic, assign) BOOL requestSerializerWithHTTP;
 /**
  *  底层封装请求方法
  *
@@ -20,10 +24,9 @@ typedef void(^RequestFailed)(NSURLSessionTask * task, id error);
  *  @param params  参数
  *  @param success 成功回调
  *  @param failure 失败回调
- *  @param header  请求头
  */
-+ (NSURLSessionDataTask *)callGETRequestWithURL:(NSString *)URL params:(NSDictionary *)params success:(RequestFinished)success failure:(RequestFailed)failure header:(NSDictionary *)header useHTTPs:(BOOL)useHTTPs;
-+ (NSURLSessionDataTask *)callPOSTRequestWithURL:(NSString *)URL params:(NSDictionary *)params success:(RequestFinished)success failure:(RequestFailed)failure header:(NSDictionary *)header useHTTPs:(BOOL)useHTTPs postContentType:(NSString *)postContentType;
+- (NSURLSessionDataTask *)callGETRequestWithURL:(NSString *)URL params:(NSDictionary *)params success:(RequestFinished)success failure:(RequestFailed)failure;
+- (NSURLSessionDataTask *)callPOSTRequestWithURL:(NSString *)URL params:(NSDictionary *)params success:(RequestFinished)success failure:(RequestFailed)failure;
 /**
  *  上传数据方法
  *
@@ -32,7 +35,6 @@ typedef void(^RequestFailed)(NSURLSessionTask * task, id error);
  *  @param block   上传数据的代码块
  *  @param success 成功回调
  *  @param failure 失败回调
- *  @param header  请求头
  */
-+ (NSURLSessionDataTask *)uploadFileWithURL:(NSString *)URL params:(NSDictionary *)params constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))block success:(RequestFinished)success failure:(RequestFailed)failure header:(NSDictionary *)header useHTTPs:(BOOL)useHTTPs;
+- (NSURLSessionDataTask *)uploadFileWithURL:(NSString *)URL params:(NSDictionary *)params constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))block success:(RequestFinished)success failure:(RequestFailed)failure;
 @end

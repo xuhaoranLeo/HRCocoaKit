@@ -103,8 +103,12 @@
     return @{};
 }
 
-- (NSString *)postContentType {
+- (NSString *)contentType {
     return @"application/json;charset=utf-8";
+}
+
+- (BOOL)requestSerializerWithHTTP {
+    return _requestSerializerWithHTTP;
 }
 
 - (AFConstructingBlock)constructing {

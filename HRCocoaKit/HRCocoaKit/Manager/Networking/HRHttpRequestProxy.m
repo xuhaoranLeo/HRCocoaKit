@@ -25,37 +25,36 @@ static CGFloat const kTimeoutInterval = 10;
     return sharedProxy;
 }
 
-+ (NSURLSessionDataTask *)callGETRequestWithURL:(NSString *)URL params:(NSDictionary *)params success:(RequestFinished)success failure:(RequestFailed)failure header:(NSDictionary *)header useHTTPs:(BOOL)useHTTPs {
-    HRHttpRequestProxy *proxy = [HRHttpRequestProxy sharedProxy];
-    proxy.sessionManager.requestSerializer.timeoutInterval = kTimeoutInterval;
-    if (useHTTPs) {
-        proxy.sessionManager.securityPolicy = [proxy configSecurityPolicy];
+- (NSURLSessionDataTask *)callGETRequestWithURL:(NSString *)URL params:(NSDictionary *)params success:(RequestFinished)success failure:(RequestFailed)failure {
+    self.sessionManager.requestSerializer.timeoutInterval = kTimeoutInterval;
+    if (self.useHTTPs) {
+        self.sessionManager.securityPolicy = [self configSecurityPolicy];
     }
-    if (header) {
-        [header enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-            [proxy.sessionManager.requestSerializer setValue:(NSString *)obj forHTTPHeaderField:(NSString *)key];
+    if (self.header) {
+        [self.header enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            [self.sessionManager.requestSerializer setValue:(NSString *)obj forHTTPHeaderField:(NSString *)key];
         }];
     }
-    return [proxy.sessionManager GET:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.sessionManager.requestSerializer setValue:self.contentType forHTTPHeaderField:@"Content-Type"];
+    return [self.sessionManager GET:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         success(task, responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failure(task, error);
     }];
 }
 
-+ (NSURLSessionDataTask *)callPOSTRequestWithURL:(NSString *)URL params:(NSDictionary *)params success:(RequestFinished)success failure:(RequestFailed)failure header:(NSDictionary *)header useHTTPs:(BOOL)useHTTPs postContentType:(NSString *)postContentType {
-    HRHttpRequestProxy *proxy = [HRHttpRequestProxy sharedProxy];
-    proxy.sessionManager.requestSerializer.timeoutInterval = kTimeoutInterval;
-    if (useHTTPs) {
-        proxy.sessionManager.securityPolicy = [proxy configSecurityPolicy];
+- (NSURLSessionDataTask *)callPOSTRequestWithURL:(NSString *)URL params:(NSDictionary *)params success:(RequestFinished)success failure:(RequestFailed)failure {
+    self.sessionManager.requestSerializer.timeoutInterval = kTimeoutInterval;
+    if (self.useHTTPs) {
+        self.sessionManager.securityPolicy = [self configSecurityPolicy];
     }
-    if (header) {
-        [header enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-            [proxy.sessionManager.requestSerializer setValue:(NSString *)obj forHTTPHeaderField:(NSString *)key];
+    if (self.header) {
+        [self.header enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            [self.sessionManager.requestSerializer setValue:(NSString *)obj forHTTPHeaderField:(NSString *)key];
         }];
     }
-    [proxy.sessionManager.requestSerializer setValue:postContentType forHTTPHeaderField:@"Content-Type"];
-    return [proxy.sessionManager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.sessionManager.requestSerializer setValue:self.contentType forHTTPHeaderField:@"Content-Type"];
+    return [self.sessionManager POST:URL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
             success(task, responseObject);
             [task cancel];
@@ -67,18 +66,18 @@ static CGFloat const kTimeoutInterval = 10;
     }];
 }
 
-+ (NSURLSessionDataTask *)uploadFileWithURL:(NSString *)URL params:(NSDictionary *)params constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))block success:(RequestFinished)success failure:(RequestFailed)failure header:(NSDictionary *)header useHTTPs:(BOOL)useHTTPs {
-    HRHttpRequestProxy *proxy = [HRHttpRequestProxy sharedProxy];
-    proxy.sessionManager.requestSerializer.timeoutInterval = kTimeoutInterval * 3;
-    if (useHTTPs) {
-        proxy.sessionManager.securityPolicy = [proxy configSecurityPolicy];
+- (NSURLSessionDataTask *)uploadFileWithURL:(NSString *)URL params:(NSDictionary *)params constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))block success:(RequestFinished)success failure:(RequestFailed)failure {
+    self.sessionManager.requestSerializer.timeoutInterval = kTimeoutInterval * 3;
+    if (self.useHTTPs) {
+        self.sessionManager.securityPolicy = [self configSecurityPolicy];
     }
-    if (header) {
-        [header enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-            [proxy.sessionManager.requestSerializer setValue:(NSString *)obj forHTTPHeaderField:(NSString *)key];
+    if (self.header) {
+        [self.header enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            [self.sessionManager.requestSerializer setValue:(NSString *)obj forHTTPHeaderField:(NSString *)key];
         }];
     }
-    return [proxy.sessionManager POST:URL parameters:params constructingBodyWithBlock:block progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.sessionManager.requestSerializer setValue:self.contentType forHTTPHeaderField:@"Content-Type"];
+    return [self.sessionManager POST:URL parameters:params constructingBodyWithBlock:block progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
             success(task, responseObject);
         }
@@ -109,7 +108,7 @@ static CGFloat const kTimeoutInterval = 10;
 - (AFHTTPSessionManager *)sessionManager {
     if (_sessionManager == nil) {
         _sessionManager = [AFHTTPSessionManager manager];
-        _sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
+        _sessionManager.requestSerializer = self.requestSerializerWithHTTP ? [AFHTTPRequestSerializer serializer] : [AFJSONRequestSerializer serializer];
         _sessionManager.requestSerializer.timeoutInterval = kTimeoutInterval;
         _sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
         _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"text/plain", @"application/json", nil];

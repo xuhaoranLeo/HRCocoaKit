@@ -23,11 +23,27 @@ typedef void (^AFConstructingBlock)(id <AFMultipartFormData> formData);
 @interface HRRequestManager : NSObject
 
 #pragma mark - public configuration
+/**
+ *  返回数据data的字面量，默认为"data"
+ */
 @property (nonatomic, strong) NSString *dataStr;
+/**
+ *  返回数据code的字面量，默认为"code"
+ */
 @property (nonatomic, strong) NSString *codeStr;
+/**
+ *  返回数据msg的字面量，默认为"msg"
+ */
 @property (nonatomic, strong) NSString *msgStr;
+/**
+ *  返回数据code成功的字符串，默认为"1"
+ */
 @property (nonatomic, strong) NSString *successStr;
+/**
+ *  返回数据code失败的字符串，默认为"0"
+ */
 @property (nonatomic, strong) NSString *failureStr;
+
 /**
  *  请求方法，默认GET请求
  */
@@ -53,9 +69,13 @@ typedef void (^AFConstructingBlock)(id <AFMultipartFormData> formData);
  */
 @property (nonatomic, strong) NSDictionary *headers;
 /**
- *  content type
+ *  content-type，默认为"application/json;charset=utf-8"
  */
-@property (nonatomic, strong) NSString *postContentType;
+@property (nonatomic, strong) NSString *contentType;
+/**
+ *  请求数据使用HTTP格式，默认为NO，使用JSON请求格式
+ */
+@property (nonatomic, assign) BOOL requestSerializerWithHTTP;
 /**
  *  上传数据的结构
  */

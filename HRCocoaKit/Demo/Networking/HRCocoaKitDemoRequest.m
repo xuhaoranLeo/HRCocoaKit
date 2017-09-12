@@ -32,4 +32,8 @@
     return @{@"this_is_a_header_string":headerStr};
 }
 
+- (BOOL)requestSerializerWithHTTP {
+    return NO;
+}
+
 @end

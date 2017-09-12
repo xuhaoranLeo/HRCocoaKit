@@ -255,7 +255,7 @@
 - (void)getLocationAuthority:(HRLocationStatusChanged)locationSettingChanged failureTip:(NSString *)tip {
     self.locationSettingChanged = locationSettingChanged;
     self.locationTip = tip;
-    [self.locationManager requestWhenInUseAuthorization];
+    [self.locationManager requestAlwaysAuthorization];
 }
 
 - (BOOL)canLocatePosition {
