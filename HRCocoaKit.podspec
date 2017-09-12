@@ -4,8 +4,11 @@ Pod::Spec.new do |s|
 # rvm use system
 # pod trunk push HRCocoaKit.podspec --allow-warnings --verbose --use-libraries
 
+### enable to locate the CocoaPods.app application bundle... ->
+### sudo gem install -n /usr/local/bin cocoapods ###
+
   s.name         = "HRCocoaKit"
-  s.version      = "0.0.21"
+  s.version      = "0.0.22"
   s.license      = 'MIT'
   s.summary      = "An Objective-C library for FiberhomeCloud by Xu Haoran"
   s.homepage     = "https://github.com/xuhaoranLeo/HRCocoaKit"
