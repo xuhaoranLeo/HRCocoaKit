@@ -24,23 +24,25 @@
 
 #pragma mark - request method
 - (void)start:(HandleData)handle error:(ErrorInfo)errorInfo {
-    if (!self.banLoadingHUD) {
+    if (!self.manualHUDOperation) {
         [HRHUDManager showLoadingAlert];
     }
     __weak typeof(self) weakSelf = self;
     self.task = [HRHttpRequestGenerator callRequest:self result:^(NSDictionary *responseObject, NSError *error) {
         if (!error) {
-            [HRHUDManager dismissAlert];
+            if (!weakSelf.manualHUDOperation) {
+                [HRHUDManager dismissAlert];
+            }
             if (handle) {
                 weakSelf.responseDic = responseObject;
                 BOOL result = [[NSString stringWithFormat:@"%@", responseObject[weakSelf.codeStr]] isEqualToString:self.successStr] ? YES : NO;
                 handle(responseObject, result);
-                if (result == NO && !self.banLoadingHUD) {
+                if (result == NO && !self.manualHUDOperation) {
                     [HRHUDManager showBriefAlert:responseObject[weakSelf.msgStr]];
                 }
             }
         } else {
-            if (!self.banLoadingHUD) {
+            if (!self.manualHUDOperation) {
                 [HRHUDManager showBriefAlert:@"网络连接失败"];
             }
             if (errorInfo) {
@@ -127,8 +129,8 @@
     return _banCache;
 }
 
-- (BOOL)banLoadingHUD {
-    return _banLoadingHUD;
+- (BOOL)manualHUDOperation {
+    return _manualHUDOperation;
 }
 
 - (NSDictionary *)responseDic {

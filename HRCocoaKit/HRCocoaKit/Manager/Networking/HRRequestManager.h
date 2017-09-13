@@ -93,9 +93,9 @@ typedef void (^AFConstructingBlock)(id <AFMultipartFormData> formData);
  */
 @property (nonatomic, assign) BOOL banCache;
 /**
- *  禁止加载的弹窗，默认不禁止
+ *  手动操作弹窗，自动的逻辑为请求接口弹出loading，接口调用成功loading消失，调用失败弹出失败原因
  */
-@property (nonatomic, assign) BOOL banLoadingHUD;
+@property (nonatomic, assign) BOOL manualHUDOperation;
 /**
  *  请求成功后保存值
  */
