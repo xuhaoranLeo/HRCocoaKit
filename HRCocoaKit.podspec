@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 ### sudo gem install -n /usr/local/bin cocoapods ###
 
   s.name         = "HRCocoaKit"
-  s.version      = "0.0.22"
+  s.version      = "0.0.23"
   s.license      = 'MIT'
   s.summary      = "An Objective-C library for FiberhomeCloud by Xu Haoran"
   s.homepage     = "https://github.com/xuhaoranLeo/HRCocoaKit"

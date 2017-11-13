@@ -30,7 +30,7 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     TestUploadAPI *api = [[TestUploadAPI alloc] initWithImage:image];
-    api.banLoadingHUD = YES;
+    api.manualHUDOperation = YES;
     [HRHUDManager showPermanentAlert:@"上传中..."];
     [api start:^(id handleData, BOOL success) {
         [HRHUDManager dismissAlert];

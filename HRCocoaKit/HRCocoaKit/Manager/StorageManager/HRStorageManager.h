@@ -44,14 +44,14 @@
  @param typeArr 保留数据的类型
  @param finish 完成回调
  */
-+ (void)removeAllCacheExceptStorageType:(NSArray <NSString *> *)typeArr finish:(void(^)())finish;
++ (void)removeAllCacheExceptStorageType:(NSArray <NSString *> *)typeArr finish:(void(^)(void))finish;
 
 /**
  移除所有数据
  
  @param finish 完成回调
  */
-+ (void)removeAllCache:(void(^)())finish;
++ (void)removeAllCache:(void(^)(void))finish;
 
 /**
  计算缓存大小

@@ -41,5 +41,7 @@ NS_CLASS_AVAILABLE_IOS(8_0) @interface HRAuthorityManager : NSObject
 - (void)getLocationAuthority:(HRLocationStatusChanged)locationSettingChanged failureTip:(NSString *)tip;
 // 获取当前城市位置信息及坐标
 - (void)getCurrentCityInfo:(HRCurrentCityInfo)info;
-
+// 根据经纬度获取位置信息
+- (void)locationInfo:(CLLocationDegrees)latitude longitude:(CLLocationDegrees)longitude result:(HRCurrentCityInfo)currentCityInfo;
 @end
+

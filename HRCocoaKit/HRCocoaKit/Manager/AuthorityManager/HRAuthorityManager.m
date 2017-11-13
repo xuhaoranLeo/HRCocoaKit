@@ -8,7 +8,6 @@
 
 #import "HRAuthorityManager.h"
 #import <UIKit/UIKit.h>
-#import "UIViewController+CurrentViewController.h"
 #import <Photos/Photos.h>
 #import <AVFoundation/AVFoundation.h>
 #import <AddressBook/AddressBook.h>
@@ -306,6 +305,24 @@
     [manager stopUpdatingLocation];
 }
 
+- (void)locationInfo:(CLLocationDegrees)latitude longitude:(CLLocationDegrees)longitude result:(HRCurrentCityInfo)currentCityInfo {
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+    CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
+    [geoCoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if (placemarks.count) {
+            CLPlacemark *placemark = placemarks.firstObject;
+            NSMutableArray *temp = [NSMutableArray array];
+            [temp addObject:placemark.administrativeArea];
+            [temp addObject:placemark.locality];
+            [temp addObject:placemark.subLocality];
+            [temp addObject:placemark.thoroughfare];
+            if (currentCityInfo) {
+                currentCityInfo(temp.copy, location.coordinate);
+            }
+        }
+    }];
+}
+
 #pragma mark 初始化manager
 - (CLLocationManager *)locationManager {
     if (_locationManager == nil) {
@@ -331,7 +348,7 @@
             }
         }];
         [alert addAction:action];
-        [[UIViewController getCurrentVC] presentViewController:alert animated:YES completion:nil];
+        [[[[UIApplication sharedApplication] keyWindow] rootViewController] presentViewController:alert animated:YES completion:nil];
     });
 }
 

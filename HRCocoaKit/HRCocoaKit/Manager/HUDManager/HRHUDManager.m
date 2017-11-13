@@ -30,19 +30,19 @@ static CGFloat const kHUDShowTime = 2.5f;
 
 #pragma mark - default method
 + (void)showLoadingAlert {
-    [HRHUDManager showLoadingAlertInView:nil];
+    [HRHUDManager showLoadingAlertInView:[UIApplication sharedApplication].keyWindow];
 }
 
 + (void)showPermanentAlert:(NSString *)message {
-    [HRHUDManager showPermanentAlert:message InView:nil];
+    [HRHUDManager showPermanentAlert:message InView:[UIApplication sharedApplication].keyWindow];
 }
 
 + (void)showBriefAlert:(NSString *)message {
-    [HRHUDManager showBriefAlert:message InView:nil];
+    [HRHUDManager showBriefAlert:message InView:[UIApplication sharedApplication].keyWindow];
 }
 
 + (void)showCustomAlert:(NSString *)message image:(NSString *)imageName {
-    [HRHUDManager showCustomAlert:message image:imageName InView:nil];
+    [HRHUDManager showCustomAlert:message image:imageName InView:[UIApplication sharedApplication].keyWindow];
 }
 
 #pragma mark - in view method
@@ -156,3 +156,4 @@ static CGFloat const kHUDShowTime = 2.5f;
 }
 
 @end
+
