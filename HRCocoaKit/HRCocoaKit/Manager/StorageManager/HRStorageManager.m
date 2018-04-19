@@ -25,16 +25,19 @@ static NSString * const FileName = @"LocalStorage";
     return sharedManager;
 }
 
-+ (BOOL)writeWithData:(id)data storageType:(NSString *)type {
++ (NSString *)getStoreageDirectory:(NSString *)type {
     HRStorageManager *mamager = [HRStorageManager sharedManager];
-    NSString *path = [mamager.storagePath stringByAppendingPathComponent:type];
+    return [mamager.storagePath stringByAppendingPathComponent:type];
+}
+
++ (BOOL)writeWithData:(id)data storageType:(NSString *)type {
+    NSString *path = [HRStorageManager getStoreageDirectory:type];
     NSData *temp = [NSKeyedArchiver archivedDataWithRootObject:data];
     return [NSKeyedArchiver archiveRootObject:temp toFile:path];
 }
 
 + (id)readWithStorageType:(NSString *)type {
-    HRStorageManager *mamager = [HRStorageManager sharedManager];
-    NSString *path = [mamager.storagePath stringByAppendingPathComponent:type];
+    NSString *path = [HRStorageManager getStoreageDirectory:type];
     NSData *data = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
     if (!data) {
         return nil;
@@ -43,8 +46,7 @@ static NSString * const FileName = @"LocalStorage";
 }
 
 + (BOOL)removeDataWithStorageType:(NSString *)type {
-    HRStorageManager *mamager = [HRStorageManager sharedManager];
-    NSString *path = [mamager.storagePath stringByAppendingPathComponent:type];
+    NSString *path = [HRStorageManager getStoreageDirectory:type];
     return [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
 }
 
@@ -100,3 +102,4 @@ static NSString * const FileName = @"LocalStorage";
 }
 
 @end
+

@@ -39,7 +39,7 @@
         [manager start:^(id handleData, BOOL success) {
             if (manager.handle) {
                 [completeHandles addObject:manager.handle];
-                [completeData addObject:handleData];
+                [completeData addObject:handleData?:@{}];
             }
             dispatch_group_leave(group);
         } error:^(NSError *error) {
